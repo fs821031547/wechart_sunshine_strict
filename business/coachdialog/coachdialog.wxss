@@ -1,0 +1,127 @@
+.showGetCoupleModal {
+  position: fixed;
+  background: rgba(0, 0, 0,0.6);
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.getCoupleSuccess {
+  position: relative;
+  z-index: 3002;
+}
+
+.getCoupleSuccess image {
+  width: 580rpx;
+  height: 800rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+  left:102rpx;
+}
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}
+.showModal view {
+  padding: 20rpx 0;
+  width: 80%;
+  margin: 40% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.showModal view text {
+  position: absolute;
+}
+
+.showModal .slide-image {
+  height: 400rpx;
+  width: 100% !important;
+}
+
+.showModal  swiper {
+  margin: 465rpx 0rpx;
+}
+
+.close {
+  position: absolute;
+  top: 135rpx;
+  right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}
+
+.getCoupleSuccess {
+  position: relative;
+  z-index: 3002;
+}
+
+.getCoupleSuccess image {
+  width: 580rpx;
+  height: 800rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+  left:102rpx;
+}
+
+.weui-input {
+  background-color: #f2f2f2;
+  margin-top: 24rpx;
+  height: 80rpx;
+  border-radius: 8rpx;
+}
+
+.place-holder {
+  font-size: 24rpx;
+  padding: 0rpx 20rpx;
+}
+
+.weui-input .submit {
+  background-color: #ffbe28 !important;
+}
+
+.submit {
+  font-size: 32rpx;
+  height: 80rpx;
+  background-color: #ffbe28;
+  line-height: 80rpx;
+  color: #fff;
+  margin-top: 24rpx;
+}
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}

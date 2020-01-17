@@ -1,0 +1,92 @@
+page{
+  background: linear-gradient(#ff2a24, #f6ab53) no-repeat;
+}
+.applybg{position:fixed;bottom:0; z-index: -1;height: 186rpx;width: 100%;}
+.coachimg{margin-bottom: 25rpx;}
+
+.applybox{margin: 0 48rpx;}
+
+.weui-cell {
+  margin-top:20rpx;
+  background: #fefcf0;
+position:relative;
+display:-webkit-box;
+display:-webkit-flex;
+display:flex;
+-webkit-box-align:center;
+-webkit-align-items:center;
+align-items:center;
+border-radius:16rpx;
+}
+.weui-input {
+min-height:95rpx;
+height:95rpx;
+line-height: 95rpx;
+ font-size:36rpx;
+margin: 0 30rpx;
+}
+.button {margin: 0; border: 0 none;
+background: linear-gradient(#ff7200, #fa0808) no-repeat;border-radius:0 16rpx 16rpx 0;
+font-size: 32rpx; line-height: 95rpx;position: absolute;right: 0;top: 0; width: 200rpx;
+}
+button::after {
+  border: none;
+}
+
+.butyes{background-color:transparent;margin: 0 -10rpx; margin-top: 20rpx;}
+.butyes button{background: linear-gradient(#ff7200, #fa0808) no-repeat;flex:2;margin: 0 10rpx;}
+
+.caption{text-align: center;font-size: 26rpx; padding-top: 30rpx;}
+
+.com-selectBox{
+    width:100%;
+    position: relative;
+}
+.com-sContent{
+    border-radius:16rpx;
+    background: #fefcf0;
+    height:95rpx;
+    line-height: 95rpx;
+    position: relative;
+}
+.com-sImg{
+    position: absolute;
+    right:30rpx;
+    top:32rpx;
+    width: 50rpx;
+    height: 29rpx;
+    transition: all .3s ease;
+}
+.com-sTxt{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding:0  0 0 30rpx;
+    font-size:36rpx;
+}
+.com-sList{
+    background: #fff;
+    border-radius:16rpx;
+    display:block;
+    position: absolute;
+    border-top: none;
+    z-index: 3;
+    overflow: hidden;
+    right: 0; left: 0;
+    top:100rpx;
+    color: #666
+}
+.com-sItem{
+    height:95rpx;
+    line-height: 95rpx;
+    border-top: 1px solid #eee;
+    padding: 0 0 0 30rpx;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:36rpx;
+}
+.com-sItem:first-child{
+    border-top: none;
+}

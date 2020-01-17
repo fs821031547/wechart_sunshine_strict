@@ -1,0 +1,9 @@
+{
+  "navigationStyle": "custom",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "coach-dialog": "/business/coachdialog/coachdialog",
+    "sign-dialog":"/business/signdialog/signdialog",
+    "greet-dialog": "/business/greetdialog/greetdialog"
+  }
+}

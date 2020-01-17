@@ -1,0 +1,52 @@
+.com-selectBox{
+    width:100%;
+    position: relative;
+}
+.com-sContent{
+    border-radius:16rpx;
+    background: #fefcf0;
+    height:95rpx;
+    line-height: 95rpx;
+    position: relative;
+}
+.com-sImg{
+    position: absolute;
+    right:30rpx;
+    top:32rpx;
+    width: 50rpx;
+    height: 29rpx;
+    transition: all .3s ease;
+}
+.com-sTxt{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    padding:0  0 0 30rpx;
+    font-size:36rpx;
+}
+.com-sList{
+    background: #fff;
+    border-radius:16rpx;
+    display:block;
+    position: absolute;
+    border-top: none;
+    z-index: 3;
+    overflow: hidden;
+    right: 0; left: 0;
+    top:100rpx;
+    color: #666
+}
+.com-sItem{
+    height:95rpx;
+    line-height: 95rpx;
+    border-top: 1px solid #eee;
+    padding: 0 0 0 30rpx;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size:36rpx;
+}
+.com-sItem:first-child{
+    border-top: none;
+}

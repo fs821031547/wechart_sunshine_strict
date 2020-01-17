@@ -1,0 +1,9 @@
+.assessbox{margin: 30rpx;}
+.assessli{background-color: #fff; margin-bottom: 10rpx; padding:20rpx 30rpx 30rpx 30rpx;}
+.assessli .Refine{display: flex;align-items: center; margin-bottom: 10rpx;}
+.assessli .Refine .star{flex: 1;}
+.assessli .Refine .star image{width: 24rpx; height: 24rpx; margin-right: 5rpx;}
+.assessli .Refine .date{font-size:24rpx; color: #999;}
+.assessli .label {margin-bottom: 15rpx;display: flex;align-items: center;}
+.assessli .label text{font-size: 20rpx; color: #6bb9ff; border: 1rpx solid #6bb9ff;padding: 5rpx 10rpx;border-radius: 8rpx; margin-right: 10rpx;}
+.assessli .con{font-size:24rpx; color: #666;}

@@ -1,0 +1,45 @@
+@import "../../componet/select/select.wxss";
+.ht80{height: 80rpx;}
+
+.position{display: flex;align-items: center;justify-content:center; font-size: 26rpx;padding:30rpx 0 0 0;}
+.position .imgw{width:25rpx; height:28rpx; margin-right:10rpx;}
+.position text{color: #e62424;text-decoration:underline;}
+
+.floatTab{height: 80rpx;display: flex;align-items: center; position: fixed;top: 0;right: 0;left: 0;z-index: 99;}
+.floatTab .tabtxt{ flex:1;width: 33.33%;}
+.com-sContent{height: 80rpx; line-height: 80rpx; background-color: #fff; border-radius: 0;}
+.com-sTxt{font-size: 26rpx;padding: 0 60rpx; color: #666;}
+.com-sImg{width: 15rpx; height: 9rpx;top:36rpx; right: 60rpx;}
+.com-sList {top:81rpx; border-top: 1rpx solid #eee;border-radius: 0; padding-left:60rpx;box-shadow:0rpx 4rpx 0rpx rgba(0,0,0,.3);}
+.com-sItem{height: 70rpx; line-height: 70rpx;font-size:25rpx; padding-left: 0;}
+
+
+.coachbox{margin:15rpx;overflow: hidden; display: flex;flex-direction: row;flex-wrap: wrap;}
+.coachli{width: 330rpx; padding: 15rpx; overflow: hidden;}
+.coachPC{width: 330rpx;height:300rpx;overflow: hidden; position: relative;}
+.coachPC .imgbox{z-index: 1;position:absolute;width: 330rpx;height:300rpx;}
+.coachPC .posd{z-index: 2;position:absolute;top:10rpx;left:10rpx;display: flex;align-items: center; background-color: #000;opacity: .7;padding: 2rpx 10rpx; border-radius:20rpx;}
+.coachPC .posd .imgw{width: 19rpx; height: 19rpx; margin-right:5rpx;}
+.coachPC .posd text{color: #fff;font-size: 20rpx;}
+
+.coachPC .firstname{z-index: 2;position:absolute;display: flex;align-items: center; background-color: #fff;
+bottom: 0;right: 0;font-size: 28rpx; padding:6rpx 10rpx 6rpx 30rpx; border-radius: 150rpx 0 0 0;background: linear-gradient(#fd982c, #e62424) no-repeat; color: #fff;
+}
+.coachPC .firstname text{border: 1rpx solid #fff;font-size: 20rpx; padding: 0 5rpx;margin-left: 10rpx;border-radius:6rpx;}
+
+.coachtitle{background-color: #fff; padding:15rpx 20rpx;display: flex;align-items: center;box-shadow:0rpx 8rpx 8rpx #eee;}
+.coachtitle .ts1{font-size: 28rpx;flex: 1;
+overflow:hidden;
+text-overflow:ellipsis; 
+white-space:nowrap;}
+.coachtitle .ts2{font-size: 20rpx;border: 1px solid #eee; color: #999;padding: 2rpx 10rpx; border-radius:20rpx;}
+
+.showModal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color:black;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}

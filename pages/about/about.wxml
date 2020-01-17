@@ -1,0 +1,46 @@
+<view class='IntAnvBox'>
+  <view class='AnvTime {{index==0?"hover":""}}' data-index="0" ontap="changeIndex">
+    <view class='titlea'>学车流程</view>
+  </view>
+  <view class='AnvTime {{index==1?"hover":""}}' data-index="1" ontap="changeIndex">
+    <view class='titlea'>常见问题</view>
+  </view>
+  <view class='AnvTime {{index==2?"hover":""}}' data-index="2" ontap="changeIndex">
+    <view class='titlea'>服务流程</view>
+  </view>
+  <view class='AnvTime {{index==3?"hover":""}}' data-index="3" ontap="changeIndex">
+    <view class='titlea'>优势对比</view>
+  </view>
+  <view class='AnvTime {{index==4?"hover":""}}' data-index="4" ontap="changeIndex">
+    <view class='titlea'>平台介绍</view>
+  </view>
+</view>
+<view class='ht80'></view>
+
+<swiper current="{{index}}" style='height:{{height}}px' bindchange="indexChange">
+  <swiper-item>
+    <scroll-view style="height:{{height}}px" scroll-y>
+      <include src="../about1/about1.wxml" />
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view style="height:{{height}}px" scroll-y>
+    <include src="../about2/about2.wxml" />
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view style="height:{{height}}px" scroll-y>
+    <include src="../about3/about3.wxml" />
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view style="height:{{height}}px" scroll-y>
+    <include src="../about4/about4.wxml" />
+    </scroll-view>
+  </swiper-item>
+  <swiper-item>
+    <scroll-view style="height:{{height}}px" scroll-y>
+    <include src="../about5/about5.wxml" />
+    </scroll-view>
+  </swiper-item>
+</swiper>

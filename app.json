@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/activity/activity",
+    "pages/about/about",
+    "pages/person/person",
+    "pages/web/web",
+    "pages/coachList/coachList",
+    "pages/coachDetail/coachDetail",
+    "pages/apply/apply",
+    "pages/browseHistory/browseHistory",
+    "pages/collection/collection",
+    "pages/order/order",
+    "pages/assess/assess",
+    "pages/comment/comment",
+    "pages/follow/follow",
+    "pages/index/index",
+    "pages/about1/about1",
+    "pages/about2/about2",
+    "pages/about3/about3",
+    "pages/about4/about4",
+    "pages/about5/about5",
+    "pages/login/login",
+    "pages/coachSearch/coachSearch",
+    "pages/city/city",
+    "pages/video/video",
+    "pages/myCoupon/myCoupon",
+    "pages/myCouple/myCouple",
+    "pages/webview/webview",
+    "pages/coupon/coupon",
+    "pages/videoList/videoList",
+    "pages/myVideoMessage/myVideoMessage",
+    "pages/myCollectVideo/myCollectVideo"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "需要使用您的位置信息给您推荐最近的教练"
+    }
+  },
+  "tabBar": {
+    "custom ":true,
+    "color": "#666",
+    "selectedColor": "#000",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/homeHover.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/activity/activity",
+        "iconPath": "image/activity.png",
+        "selectedIconPath": "image/activityHover.png",
+        "text": "发现"
+      },
+        {
+          "pagePath": "pages/video/video",
+          "iconPath": "image/Introduction.png",
+          "selectedIconPath": "image/IntroductionHover.png",
+          "text": "视频"
+        },
+      {
+        "pagePath": "pages/person/person",
+        "iconPath": "image/mine.png",
+        "selectedIconPath": "image/mineHover.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

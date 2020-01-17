@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "领取优惠券",
+    "usingComponents": {
+      "coach-dialog": "/business/coachdialog/coachdialog",
+      "couple-dialog": "/business/coupledialog/coupledialog"
+    }
+}

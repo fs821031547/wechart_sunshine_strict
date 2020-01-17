@@ -1,0 +1,103 @@
+/**app.wxss**/
+page{background: #f5f5f5;}
+.imgw{width: 100%;}
+
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.margin-t-20 {
+  margin-top: 20rpx;
+}
+
+.margin-t-30 {
+  margin-top: 30rpx;
+}
+
+.margin-t-40 {
+  margin-top: 40rpx;
+}
+.margin-b-10 {
+  margin-bottom: 10rpx;
+}
+.margin-b-20 {
+  margin-bottom: 20rpx;
+}
+
+.margin-b-30 {
+  margin-bottom: 30rpx;
+}
+
+.margin-tb-20 {
+  margin: 20rpx 0rpx;
+}
+
+.padding-tb-20{
+  padding: 20rpx 0rpx;
+}
+.padding-t-20{
+  padding-top: 20rpx;
+}
+.padding-t-10{
+  padding-top: 10rpx;
+}
+.padding-20{
+  padding: 20rpx
+}
+.padding-tb-20 {
+  padding: 20rpx 0rpx;
+}
+.reButton{
+  padding: 2rpx 6rpx;
+  margin: 0;
+}
+.fontSize-28{
+  font-size: 28rpx;
+}
+.fontWeight{
+  font-weight: bold
+}
+.font-600{
+   font-weight: 600;
+}
+.font-500{
+   font-weight: 500;
+}
+.fontSize-20{
+  font-size: 20rpx;
+}
+.fontSize-24{
+  font-size: 24rpx;
+}
+.fontSzie-26{
+  font-size: 26rpx;
+}
+.fontSize-26{
+font-size: 26rpx;
+}
+.fontSize-27{
+  font-size: 27rpx;
+}
+.fontSzie-30{
+  font-size: 30rpx;
+} 
+.fontSize-32{
+  font-size: 32rpx;
+}
+.fontSize-36{
+  font-size: 36rpx;
+}
+.fontSize-40 {
+  font-size: 40rpx;
+}
+.userImg {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 70rpx;
+  margin-right: 20rpx;
+}

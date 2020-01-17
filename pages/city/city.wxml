@@ -1,0 +1,42 @@
+<!--pages/city/city.wxml-->
+<view class="header-box bottom-border">
+    <view class="search-box">
+        <image class="search-icon" src="/image/search_icon.png" />
+        <input class="search-input" type="text" placeholder="请输入城市名" placeholder-class="input-placeholder" bindinput="search" />
+    </view>
+</view>
+
+<view class="select-word">
+    <view class="word-item" wx:for="{{citys}}" wx:key="index" data-scroll-word="{{item.letter}}" catch:tap="setWord">
+        {{item.letter}}
+    </view>
+</view>
+<scroll-view id="scroll-view" scroll-y="{{true}}" class="city-scroll" scroll-into-view="{{scrollWord}}" scroll-with-animation="{{true}}" style="height:{{scrollHeight}}px">
+<view class="currentCity">
+<text>当前定位城市:  </text><text>{{city}}</text>
+<view class='refresh' bindtap="refreshCity">
+<!-- <image class="imgw{{selectArea ? 'rotateRight' :''}}" src="/image/refresh.png" ></image>
+<text>刷新</text> -->
+</view>
+</view>
+
+  <view hidden="{{searchRes.length>0}}">
+        <view class="item-box" wx:for="{{citys}}" wx:key="index">
+            <view id="{{item.letter}}" class="tag">{{item.letter}}</view>
+            <view class="citys-box">
+                <view wx:for="{{item.map}}" wx:key="code" wx:for-item="city" class="citys-item bottom-border" data-current-active="list" data-choosed-citys="{{city}}" catch:tap="setCity">
+                    {{city.city}}
+                </view>
+            </view>
+        </view>
+    </view>
+
+  <view hidden="{{searchRes.length===0}}">
+      <view id="location" class="tag">搜索结果</view>
+      <view class="citys-box">
+          <view wx:for="{{searchRes}}" wx:key="code" class="citys-item bottom-border {{currentActive==='search'&&choosedCitys.code===item.code && 'city-active'}}" data-current-active="search" data-choosed-citys="{{item}}" catch:tap="setCity">
+              {{item.city}}
+          </view>
+      </view>
+  </view>
+</scroll-view>

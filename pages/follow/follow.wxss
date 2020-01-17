@@ -1,0 +1,19 @@
+page{background: #fff;}
+.mp30{margin:60rpx 0;}
+.ht50{height: 50rpx;}
+.attenbg{
+background: #c8161d;
+position: relative;
+background: linear-gradient(#e62424, #c8161d) no-repeat;
+padding: 20rpx 0 50rpx;
+text-align: center;
+}
+.attentit{color: #fff; font-size:48rpx;  margin-bottom: 10rpx;}
+.attentxt{margin: 0 auto;position: relative;font-size: 30rpx;color: #fff;display: inline-block;}
+.attentxt .mar{width: 45rpx; height: 1rpx; background-color: #fff;position: absolute;top:20rpx;}
+.attentxt .mar.fr{right: -60rpx;}
+.attentxt .mar.fl{left: -60rpx;}
+
+.step{font-size: 50rpx; color: #c8161d; margin:0 60rpx;margin-bottom:15rpx;}
+.attTitle{font-size:30rpx; color: #666; margin:0 60rpx;margin-bottom:15rpx;}
+.point{color: #509cff;font-weight: 700;}

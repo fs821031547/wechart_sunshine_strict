@@ -1,0 +1,79 @@
+.showGetCoupleModal {
+  position: fixed;
+  background: rgba(0, 0, 0,0.6);
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.getCoupleSuccess {
+  position: relative;
+  z-index: 3002;
+}
+
+.getCoupleSuccess image {
+  width: 580rpx;
+  height: 800rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+  left:102rpx;
+}
+
+/* 报名开始 */
+.getCoupleSuccess  .signLearnCar{
+  position: absolute;
+bottom: 90rpx;
+width: 380rpx;
+height: 230rpx;
+left: 102rpx;
+
+}
+.getCoupleSuccess  .coupleDesc{
+  position: absolute;
+  bottom: 350rpx;
+  width: 380rpx;
+  height: 50rpx;
+  left:102rpx;
+  z-index:4000
+}
+.form .userName,.form .userTel {
+height: 70rpx!important;
+margin-top: 20rpx !important;
+}
+.coupleDesc .form-title1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 10rpx;
+  left: 6rpx;
+  width: 356rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+.coupleDesc .form-title2{
+  padding-top:10rpx;
+}
+.coupleDesc .form-title2::after{
+  content: '';
+  position: absolute;
+  bottom:-44rpx;
+  height: 10rpx;
+  left: 6rpx;
+  width:268rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+/* 报名结束 */
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}

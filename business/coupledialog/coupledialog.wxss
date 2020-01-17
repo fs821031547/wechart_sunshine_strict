@@ -1,0 +1,1115 @@
+@import "../../componet/select/select.wxss";
+
+page {
+  background: #fff;
+}
+
+.r-blank {
+  height: 50rpx;
+}
+
+image {
+  vertical-align: middle;
+  display: block;
+  height: 270rpx;
+}
+
+
+
+.rock-blank-20 {
+  /* height: 20rpx; */
+  height: 66rpx;
+  position: relative;
+  z-index: 1;
+}
+
+swiper {
+  margin-bottom: 30rpx;
+}
+
+.par30 {
+  margin: 0rpx 40rpx 10rpx 40rpx;
+}
+
+.contain {
+  margin-top: 119rpx;
+  background: #fff;
+}
+
+.topnav {
+  position: fixed;
+  left: 0rpx;
+  top: 113rpx;
+  background-color: #fff;
+  z-index: 9999;
+  padding-left: 40rpx;
+}
+
+.topnav.iphoneX {
+  top: 176rpx;
+}
+
+.getCouple {
+  padding: 20rpx 30rpx;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12rpx;
+  box-shadow: 0px 0px 30px rgba(188, 188, 188, 0.349019607843137);
+}
+
+.userImg {
+  flex: 1;
+}
+
+.getCouplePeo {
+  flex: 3;
+}
+
+.getBtn {
+  flex: 1;
+  margin-left: 20rpx;
+}
+
+.getBtn button {
+  font-size: 26rpx;
+  background-color: #812dff;
+  padding: 2rpx 6rpx;
+  margin: 0;
+  line-height: 40rpx;
+  color: #fff;
+  transition: 0.1s;
+  transform: rotate(360deg);
+}
+
+.getCouplePeo text {
+  display: block;
+}
+
+/* 找他学车 */
+
+.findCoachLearnCar {
+  background-color: #ffbe28;
+}
+
+.CoachInf {
+  background-color: #fff;
+  margin-bottom: 20rpx;
+  box-shadow: 0rpx 8rpx 8rpx #eee;
+}
+
+.CoachInf image {
+  height: 630rpx;
+}
+
+.CoachInf .coachbox {
+  padding: 25rpx 30rpx;
+}
+
+.CoachInf .con1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: 10rpx;
+}
+
+.CoachInf .con1 .Name {
+  font-size: 34rpx;
+}
+
+.CoachInf .con1 .Model {
+  margin: 0 10rpx;
+  background-color: #008cf8;
+  font-size: 26rpx;
+  height: 32rpx;
+  line-height: 30rpx;
+  color: #fff;
+  padding: 0 10rpx;
+  border-radius: 6rpx;
+}
+
+.CoachInf .con1 .Popularity {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 0;
+  font-size: 24rpx;
+}
+
+.CoachInf .con1 .Popularity .imgw {
+  width: 17rpx;
+  height: 21rpx;
+  margin-right: 5rpx;
+}
+
+.CoachInf .con2 {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 24rpx;
+  color: #999;
+}
+
+.CoachInf .con2 .line {
+  font-size: 22rpx;
+  margin: 0 10rpx;
+}
+
+.CustomerService {
+  width: 118rpx;
+  height: 118rpx;
+  position: fixed;
+  right: 15rpx;
+  bottom: 80rpx;
+  z-index: 999;
+}
+
+.CustomerService button {
+  background-color: transparent;
+  border: 0 none;
+  padding: 0;
+  line-height: normal;
+}
+
+.CustomerService button::after {
+  border: none;
+}
+
+.ViewDat {
+  padding: 0 0 30rpx 0;
+}
+
+.ViewDat button {
+  background-color: transparent;
+  border: 0 none;
+  padding: 20rpx;
+  line-height: normal;
+  font-size: 30rpx;
+  color: #008cf8;
+}
+
+.ViewDat button::after {
+  border: none;
+}
+
+.topFixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1001;
+  height: 130rpx;
+  background: #fff;
+}
+
+.floatTab {
+  height: 70rpx;
+  display: flex;
+  align-items: center;
+}
+
+.floatTab .tabtxt {
+  flex: 1;
+  width: 50%;
+}
+
+.floatTab .tabtxtSec {
+  margin-left: -20rpx;
+}
+
+.com-sContent {
+  height: 70rpx;
+  line-height: 51rpx;
+  background-color: #fff;
+  border-radius: 0;
+}
+
+.com-sTxt {
+  font-size: 28rpx;
+  padding: 0 40rpx;
+  color: #666;
+  width: 110rpx;
+  text-align: right;
+}
+
+.com-sImg {
+ width: 19rpx;
+  height: 13rpx;
+  top: 22rpx;
+  right: 24rpx;
+
+}
+
+.com-sList {
+  /* top: 932rpx;
+  border-top: 1rpx solid #eee;
+  border-radius: 0;
+  padding:0rpx 50rpx;
+  box-shadow: 0rpx 1rpx 0rpx rgba(0, 0, 0, 0.3); */
+  background: #fff;
+  border-radius: 16rpx;
+  display: block;
+  position: absolute;
+  border-top: none;
+  z-index: 3000;
+  overflow: hidden;
+  right: 0;
+  left: 0;
+  top: 150rpx;
+  color: #666;
+}
+
+.com-sItem {
+  /* height: 70rpx;
+  line-height: 70rpx;
+  font-size: 25rpx;
+  padding-left: 0; */
+  height: 95rpx;
+  line-height: 95rpx;
+  border-top: 1px solid #eee;
+  padding: 0 0 0 30rpx;
+  text-align: left;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 25rpx;
+}
+
+.header-blank {
+  height: 30rpx;
+  width: 100%;
+  position: relative;
+}
+
+.header-box {
+  height: 117rpx;
+  display: flex;
+  align-items: center;
+  font-size: 26rpx;
+  background-color: #fff;
+  justify-content: center;
+  position: relative;
+  padding: 0rpx 20rpx;
+  margin-top: 20rpx;
+}
+
+.headerTitle {
+  flex: 1;
+  /* margin-left: -130rpx; */
+  font-size: 36rpx;
+  text-align: center;
+  /* margin-top: 50rpx; */
+}
+
+/* .header-box view{
+  justify-content: center;
+  display: flex;
+  align-items: center;
+    font-size: 26rpx;
+} */
+
+.searchCoach {
+  background: #fff;
+  position: relative;
+  z-index: 1000;
+}
+
+.searchCoachBox {
+  display: flex;
+  margin-bottom: 35rpx;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  height: 60rpx;
+  border: 1px solid #dfdfdf;
+  background-color: #fff;
+  border-radius: 200rpx;
+  width: 340rpx;
+}
+
+.search-icon {
+  width: 28rpx;
+  height: 28rpx;
+  margin-right: 16rpx;
+}
+
+.search-dows {
+  width: 20rpx;
+  height: 20rpx;
+  display: inline-block;
+  /* position: absolute;
+  left: 118rpx;
+  top: 20rpx; */
+}
+
+.marker {
+  width: 28rpx;
+  height: 28rpx;
+  vertical-align: middle;
+  display: inline-block;
+  /* position: absolute;
+  left: 0rpx;
+  top: 20rpx; */
+}
+
+.currentCity {
+  font-size: 28rpx;
+  /* position: absolute;
+left: 32rpx;
+top: 2rpx; */
+  display: inline-block;
+  line-height: inherit;
+}
+
+.currentCity, .marker {
+  vertical-align: middle;
+}
+
+.search-input {
+  width: 280rpx;
+  padding: 0rpx 0rpx 0rpx 20rpx;
+  font-size: 28rpx;
+  color: #999;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.confirm {
+  width: 100rpx;
+  padding-right: 20rpx;
+  height: 65rpx;
+  margin-right: 20rpx;
+  text-align: left;
+  line-height: 65rpx;
+  font-size: 26rpx;
+  color: #333;
+  border-radius: 8rpx;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+.city-box {
+  position: absolute;
+  top: 0;
+  color: #333;
+  font-size: 28rpx;
+  left: 40rpx;
+}
+
+.userImg {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+}
+
+.hotSel {
+  background: #fff;
+}
+
+.more {
+  color: #999;
+}
+
+.f-right {
+  float: right;
+}
+
+text {
+  font-size: 30rpx;
+}
+
+.activeImg image {
+  width: 325rpx;
+  height: 175rpx;
+  border-radius: 12rpx;
+}
+
+.margin-bt-30 {
+  margin-bottom: 30rpx;
+}
+
+.activeImg {
+  display: flex;
+  width: 100%;
+}
+
+.activeImg:nth-of-type(1) {
+  margin-right: 20rpx;
+}
+
+.activeImg .active {
+  width: 100%;
+  text-align: center;
+  padding: 10rpx;
+}
+
+.activeImg .active image {
+  /* width: 100%;
+  height: 100%; */
+  width: 325rpx;
+  height: 175rpx;
+}
+
+.showCaseList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: no-wrap;
+  width: 100%;
+}
+
+.caochLableItem {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.caochLableItem view {
+  width: calc(calc(100% / 3) - 10px);
+  margin: 5px;
+  box-sizing: border-box;
+  border: 1px solid #f5f5f5;
+  background-color: red;
+}
+
+.caochLableItem text {
+  text-align: center;
+  font-size: 24rpx;
+  color: #fff;
+}
+
+.caochLableList {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 66rpx;
+  overflow: hidden;
+}
+
+.caochLableList.active {
+  height: auto;
+}
+
+.caochLableList-item {
+  width: 200rpx;
+  margin-right: 35rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  font-size: 24rpx;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  color: #666;
+  margin-bottom: 20rpx;
+}
+
+.caochLableList-item:nth-of-type(3n+0) {
+  margin-right: 0;
+}
+
+.caochLableList-item text {
+  font-size: 24rpx;
+  color: #5e5e5e;
+}
+
+.arrow-down {
+  display: flex;
+  justify-content: center;
+}
+
+.arrow-down image {
+  width: 670rpx;
+  height: 30rpx;
+}
+
+.coachPerInfoList {
+  padding:0rpx 0rpx 40rpx 0rpx;
+  margin-bottom: 40rpx;
+  background-color: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.coachPerInfo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 30rpx;
+  position: relative;
+}
+
+.coachPerInfo  .avatar {
+  flex: 1;
+  border-radius: 8rpx;
+}
+
+.coachPerInfo  .info {
+  padding-top: 0rpx;
+  flex: 2;
+}
+
+.coachPerInfo  .tool {
+  display: flex;
+  flex: 3;
+  padding-top: 15rpx;
+  font-size: 26rpx;
+}
+
+.coachName {
+  font-weight: 700;
+  font-size: 36rpx;
+}
+
+.driverSchool {
+  color: #999;
+  font-size: 32rpx;
+}
+
+.tool button {
+  padding: 0; 
+  height: 64rpx;
+  line-height:  64rpx;
+  width: 160rpx;
+  font-size: 30rpx;
+  margin: 0 0 0 15rpx;
+  border-radius: 50rpx;
+}
+
+.tool button:nth-of-type(1) {
+  background: #fff;
+  color: #ff8451;
+  border: 1rpx solid #ff8451
+}
+
+.tool button:nth-of-type(2) {
+  background:#ffbe28;
+  color: #000
+}
+
+.tool button::after {
+  border: none;
+}
+
+.colorYellow {
+  color: #ffbe28;
+  font-size: 40rpx;
+}
+
+.goldCaoch {
+  /* padding: 8rpx 0rpx 14rpx 20rpx */
+}
+
+.more-icon {
+  width: 10rpx;
+  height: 18rpx;
+  float: right;
+  margin-left: 10rpx;
+  margin-top: 16rpx;
+}
+
+/*  */
+
+.detailInfo {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0rpx 0rpx 4rpx;
+}
+
+.detailInfo .remark {
+  flex: 2;
+}
+
+.detailInfo .carType {
+  flex: 1;
+}
+
+.detailInfo .coachAge {
+  flex: 1;
+}
+
+.detailInfo .distants {
+  flex: 1;
+}
+
+.detailInfo .detailInfoTitle {
+  color: #999;
+}
+
+.detailInfoCon {
+color: #666;
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.detailInfoCon.remark {
+  font-size: 32rpx;
+}
+.remark image {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+/* .coachImgList{
+    width: 100%;
+  display: flex;
+  position: relative;
+
+}
+.coachImg{
+  flex:1;
+  position: relative
+}
+.coachImg image{
+   width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+}
+ */
+
+.coachImgList {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: no-wrap;
+  width: 100%;
+  position: relative;
+  padding:10rpx 0rpx 20rpx;
+}
+
+.coachImgList-item {
+  margin-right: 35rpx;
+}
+
+.coachImgList-item:nth-of-type(3) {
+  margin-right: 0;
+}
+
+.coachImg-item {
+  flex: 1;
+  position: relative;
+}
+
+.coachImg {
+  /* width: calc(calc(100% / 3) - 16rpx); */
+  text-align: center;
+  font-size: 24rpx;
+  border: none;
+  box-sizing: border-box;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.coachPerInfoList:last-child {
+  border: none !important;
+}
+
+.coachImg image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+}
+
+.moreImg::before {
+  position: absolute;
+  z-index: 10;
+  right: 0rpx;
+  top: 0rpx;
+  left: 0rpx;
+  bottom: 0rpx;
+  content: '';
+  background: #000;
+  opacity: 0.6;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+}
+
+.lookMore {
+  position: absolute;
+  top: 100rpx;
+  right: 48rpx;
+  color: #fff;
+  z-index: 240;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.studentImpression text {
+  padding-right: 20rpx;
+}
+
+.tagList {
+  display: inline-block;
+}
+
+.showModal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 3001;
+  top: 0;
+  left: 0;
+}
+
+/*问候语优惠券*/
+
+.showGetCoupleModal {
+  position: fixed;
+  background: rgba(0, 0, 0,0.6);
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.getCoupleSuccess {
+  position: relative;
+  z-index: 3002;
+}
+
+.getCoupleSuccess image {
+  width: 580rpx;
+  height: 800rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+  left:102rpx;
+}
+
+/* 报名开始 */
+.getCoupleSuccess  .signLearnCar{
+  position: absolute;
+bottom: 90rpx;
+width: 380rpx;
+height: 230rpx;
+left: 102rpx;
+}
+.getCoupleSuccess  .coupleDesc{
+  position: absolute;
+  bottom: 350rpx;
+  width: 380rpx;
+  height: 50rpx;
+  left:102rpx;
+  z-index:4000
+}
+.form .userName,.form .userTel {
+height: 70rpx!important;
+margin-top: 16rpx !important;
+}
+.coupleDesc .form-title1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 8rpx;
+  left: 6rpx;
+  width: 356rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+.coupleDesc .form-title2{
+  padding-top:4rpx;
+}
+.coupleDesc .form-title2::after{
+  content: '';
+  position: absolute;
+  bottom:-44rpx;
+  height: 8rpx;
+  left: 6rpx;
+  width:268rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+.signLearn image {
+width: 60rpx;
+height: 60rpx;
+position: absolute;
+bottom: -200rpx !important;
+display: flex;
+left: 160rpx;
+}
+
+/* 报名结束 */
+
+/* 领取优惠券开始 */
+
+.getCoupleSuccess .singleCoachDesc{
+  position: absolute;
+  bottom: 190rpx;
+  height: 228rpx;
+  width: 500rpx  !important;
+  left:80rpx !important;
+}
+
+/* 领取优惠券结束 */
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}
+.showModal view {
+  padding: 20rpx 0;
+  width: 80%;
+  margin: 40% auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+}
+
+.showModal view text {
+  position: absolute;
+}
+
+.showModal .slide-image {
+  height: 400rpx;
+  width: 100% !important;
+}
+
+.showModal  swiper {
+  margin: 465rpx 0rpx;
+}
+
+.close {
+  position: absolute;
+  top: 170rpx;
+  right: 5px;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.studentImpression text {
+  font-size: 24rpx;
+}
+
+.noMore {
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  padding-top: 60rpx;
+  /* padding: 60rpx 0rpx 120rpx 0rpx; */
+  display: none;
+}
+
+.noMore text {
+  font-size: 22rpx;
+  color: #999;
+}
+
+.weui-input {
+  background-color: #f2f2f2;
+  margin-top: 24rpx;
+  height: 80rpx;
+}
+
+.place-holder {
+  font-size: 24rpx;
+  padding: 0rpx 20rpx;
+}
+
+.weui-input .submit {
+  background-color: #ffbe28 !important;
+}
+
+.submit {
+  font-size: 32rpx;
+  height: 80rpx;
+  background-color: #ffbe28;
+  line-height: 80rpx;
+  color: #fff;
+  margin-top: 24rpx;
+}
+
+
+.goldCaoch {
+  /* padding: 8rpx 0rpx 14rpx 20rpx; */
+  position: absolute;
+  bottom: 12rpx;
+  left: -10rpx;
+}
+
+.imgw {
+  height: 300rpx;
+  border-radius: 12rpx;
+}
+
+.goldCaoch button {
+  border: none;
+  width: 120rpx;
+  height: 46rpx;
+  line-height: 46rpx;
+  font-size: 26rpx;
+  color: #fff;
+  background: url('http://img.91ygxc.com/filestore1/M00/32/EA/rBLZzV2j1sGAMAqkAAAMS_38arw072.png');
+  background-size: cover;
+}
+
+.goldCaoch button::after {
+  border: none;
+}
+
+.coachPerInfoList {
+  position: relative;
+}
+
+.caochLableList-item.active {
+  background: #ffefc9;
+  color: #ffbe28;
+}
+
+.studentImpression {
+  display: flex;
+  align-items: center;
+}
+
+.studentImpression text {
+  padding-right: 20rpx;
+}
+
+.studentImpression text {
+  font-size: 24rpx;
+}
+
+.studentImpression-text {
+  position: relative;
+  font-size: 28rpx;
+  font-weight: 600;
+  font-style: italic;
+  z-index: 0;
+  margin-right: 25rpx;
+  color: #666
+}
+
+.studentImpression-text::before {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  z-index: -1;
+  left: 0;
+  width: 95rpx;
+  height: 11rpx;
+  background: url('http://img.91ygxc.com/filestore1/M00/32/FE/rBLZzV2kDLOACgLFAAACxkQyG-w278.png') no-repeat;
+  background-size: cover;
+}
+
+.impression-item{
+  font-size: 24rpx;
+}
+
+.impression-item:nth-of-type(2), .impression-item:nth-of-type(5) {
+  color: #f7b87b;
+}
+
+.impression-item:nth-of-type(3), .impression-item:nth-of-type(6) {
+  color: #89ddc7;
+}
+
+.impression-item:nth-of-type(4), .impression-item:nth-of-type(7) {
+  color: #a29fed;
+}
+
+.goTop {
+  width: 90rpx;
+  height: 90rpx;
+  position: fixed;
+  bottom: 100rpx;
+  right: 30rpx;
+  border-radius: 50%;
+  z-index: 999999999;
+}
+
+.showGoTop {
+  display: block;
+}
+
+.hideGoTop {
+  display: none;
+}
+
+/* .getPhoneNumber{
+  position: absolute;
+
+} */
+
+.text-overflow-1 {
+  white-space: nowrap;
+  word-wrap: break-word;
+  word-break: break-all;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #666;
+}
+
+.index-title-box {
+  position: relative;
+  z-index: 0;
+}
+
+.index-title-box::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 15rpx;
+  left: 6rpx;
+  width: 66rpx;
+  background: #ffbe28;
+  z-index: -1;
+}
+
+.remark .remark-icon {
+  width: 36rpx;
+  height: 36rpx;
+  float: left;
+  margin-right: 5rpx;
+}
+
+.getCoupleImg {
+  width: 100rpx;
+  height: 100rpx;
+}
+
+
+
+
+.getCoupleWrap{
+    position: fixed;
+  background: #000;
+  opacity: 0.8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index:3005;
+}
+
+.getCoupleSuccessImg{
+  width: 580rpx;
+  height: 800rpx;
+ 
+
+}
+.getCoupleSuccessImg image{
+   width: 580rpx;
+  height: 800rpx;
+   position: absolute;
+  z-index:3006;
+}

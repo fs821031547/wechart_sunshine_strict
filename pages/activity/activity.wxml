@@ -1,0 +1,114 @@
+<view class='par30'>
+<view class="activity-bg"></view>
+    <view class="activityHeaderTitle">
+      发现
+    </view>
+    <view class="activity-hearder-blank"></view>
+<!-- <view class="contain"> -->
+
+  <view wx:if="{{activity != null && activity.length>0}}" class="page-section page-section-spacing swiper">
+    <swiper indicator-dots="{{activity != null && activity.length>1}}" autoplay="{{true}}" interval="{{3000}}" duration="500" indicator-active-color="#e62424">
+      <!-- <block wx:for="{{activity}}" wx:for-item="data" wx:key="">
+        <swiper-item>
+          <view class="swiper-item">
+            <image src="{{data.photoUrl}}" class='imgw' mode="widthFix" data-index="{{index}}" ontap="clickActivity" />
+          </view>
+        </swiper-item>
+      </block> -->
+      <block wx:for="{{activity}}" wx:for-item="data" wx:key="">
+        <swiper-item>
+          <!-- <view class="swiper-item">
+            <image src="{{data.photoUrl}}" class='imgw' mode="widthFix" data-index="{{index}}" ontap="clickActivity" />
+          </view> -->
+          <view class='PasteventsCon hearder' data-item="{{data}}" ontap="clickActivityHistory">
+            <view class='img'>
+              <image src="{{data.photoUrl}}" class='imgw' />
+            </view>
+            <view class='txtbox'>
+              <view class='tit'>{{data.title}}</view>
+              <view class="weui-media-box__desc">{{data.description}}</view>
+            </view>
+          </view>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- <view class="coupon-box">
+    <view class='module-title'>
+    优惠券精选
+      <view class="right-more" ontap="goCoupon">
+      <text>更多</text>
+      <image class="more-icon" src="http://img.91ygxc.com/filestore1/M00/32/EC/rBLZzl2j2QOAU4OzAAAA6-paYc8212.png"></image>
+      </view>
+    </view>
+    <view class="coupon-list">
+      <view class="coupon-main">
+        <image class="coupon-main-img" src="{{couponList[0].photoUrl}}" mode="widthFix"  
+         data-couponId="{{couponList[0].couponId}}"
+        data-index="0" ontap="couponList0"></image>
+        <view class="main-title">{{couponList[0].title}}</view>
+        <view class="main-desc">{{couponList[0].description}}</view>
+      </view>
+      <view class="middle-blank"></view>
+      <view class="coupon-aside">
+        <view class="coupon-aside-item">
+        <image mode="widthFix" data-index="1" ontap="couponList1" class="coupon-main-img" 
+          data-couponId="{{couponList[1].couponId}}"
+        src="{{couponList[1].photoUrl}}"></image>
+        </view>
+        <view class="coupon-aside-item">
+        <image mode="widthFix" data-index="2" ontap="couponList2" class="coupon-main-img" 
+         data-couponId="{{couponList[2].couponId}}"
+        src="{{couponList[2].photoUrl}}"></image>
+        </view>
+      </view>
+    </view>
+  </view> -->
+  <view class='Pastevents'>
+    <!-- <view class='img'>
+      <image src="/image/doingIcon.png" class='imgw' mode="widthFix" />
+    </view> -->
+    <view class='module-title'>活动资讯</view>
+  </view>
+  <view class="PasteventsCon-box">
+    <block wx:for="{{activityHistory}}" wx:for-item="data" wx:key="">
+      <view class='PasteventsCon' data-item="{{data}}" ontap="clickActivityHistory">
+        <view class='img'>
+          <image src="{{data.photoUrl}}" class='imgw' />
+        </view>
+        <view class='txtbox'>
+          <view class='tit'>{{data.title}}</view>
+          <view class="weui-media-box__desc">{{data.description}}</view>
+        </view>
+      </view>
+    </block>
+    <view class="doingNO-box">
+      <view wx:if="{{pageNo<totalPageCount}}" bindtap="loadMore" class='doingNO'>
+        <text decode="{{true}}">加载更多&nbsp;&nbsp;</text>
+        <image class="more-img" src="http://img.91ygxc.com/filestore1/M00/32/F9/rBLZzl2j8xyAX2f9AAAA668-nFo572.png"></image>
+      </view>
+      <view wx:else class='doingNO'>没有更多了</view>
+    </view>
+  </view>
+    
+     <block>
+        <view wx:if="{{getHotActiveModal}}" class="showGetCoupleModal">
+          <view class="getCoupleSuccess">
+            <image src="/image/getCoupleSuccess.png"></image>
+            <view class="form">
+              <form bindsubmit="formSubmit" bindreset="formClose">
+                <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindKeyNameInput" />
+                <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindKeyMobInput" />
+                <button class="submit" formType="submit">提交</button>
+                <view class="formClose" bindtap="formClose">
+                  <image src="/image/circle-close.png"></image>
+                </view>
+              </form>
+            </view>
+          </view>
+        </view>
+      </block>
+  <!-- <web-view src="{{webPageUrl}}"></web-view> -->
+<!-- 
+</view> -->
+</view>

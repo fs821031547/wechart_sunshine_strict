@@ -1,0 +1,24 @@
+.pam30{ margin: 30rpx;overflow: hidden;background-color: #fff;}
+
+.StarBox{}
+.Star{display: flex;align-items: center; position: relative;justify-content: center;padding: 45rpx 0 20rpx;}
+.Star image{width: 78rpx; height: 78rpx; margin: 0 10rpx;}
+.Des{font-size: 34rpx;text-align: center; color: #e62424;}
+
+
+.Option{margin: 0 20rpx; overflow: hidden;padding:20rpx 0;display: flex; flex-wrap:wrap;}
+.Optionli{height: 75rpx; line-height: 75rpx; width: 300rpx;border: 1rpx solid #ddd;border-radius: 12rpx; text-align: center;color: #999;font-size: 30rpx;position: relative;overflow: hidden; margin:10rpx;}
+.OptionIMG{width: 50rpx; height: 46rpx;position: absolute;bottom: 1rpx;right: 1rpx;display:none;}
+.OptionliYes{border: 1rpx solid #fa1107;color: #fa1107;}
+.OptionliYes .OptionIMG{display: block;}
+
+.DesTXT{padding:30rpx;background-color: #fafafa;margin: 0 30rpx;border: 1rpx solid #ddd;border-radius: 12rpx; margin-bottom: 30rpx;}
+.DesTXT textarea{width: 100%; color: #999;}
+
+.butRaise{margin: 0 30rpx; margin-bottom: 30rpx;}
+.butRaise button {margin: 0; border: 0 none;
+background: linear-gradient(#ff7200, #fa0808) no-repeat;border-radius:12rpx;line-height: 95rpx;
+}
+.butRaise button::after {
+  border: none;
+}

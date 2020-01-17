@@ -1,0 +1,114 @@
+
+
+<view class="contain">
+  <view class="videoTitle">
+    <view class="videoTitleItem {{currentTab==0?'active':''}} fontSize-24" data-current="0" bindtap="clickTab">最新发布</view>
+    <view class="videoTitleItem {{currentTab==1?'active':''}} fontSize-24" data-current="1" bindtap="clickTab">热门视频</view>
+  </view>
+<scroll-view scroll-y bindscrolltolower="addVideo" style="position:absolute; top:0; left:0; right:0; bottom:0;"> 
+  <view class="videoCon">
+      <view class = "{{currentTab == 0 ? 'showCurrentTab':'hiddenCurrentTab'}}">
+          <view class="left">
+            <view wx:for="{{list}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+              <view class="latestVideoLeftitem" wx:if="{{index%2==0}}">
+                  <view class="videoplay_btn">
+                   <view  class="play" >
+                   <image bindtap="tabVideo"  data-id="{{item.id}}" data-watchCount="{{item.watchCount}}" src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+                   </view>
+                  <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" data-id="{{item.id}}" 
+                  data-watchCount="{{item.watchCount}}"></image>
+                  <!-- <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" 
+                  data-id="{{item.id}}" data-watchCount="{{item.watchCount}}"></image> -->
+                    <view class="activeBox">
+                      <view class="watchCount">
+                       <text style="margin-right:4rpx;">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}</text>
+                      <text>播放</text>
+                      </view>
+                      <view class="heartCount ">
+                        <image src="/image/heartCount.png"></image>
+                        <text>{{item.heartCount}}</text>
+                      </view>
+                    </view>
+                  </view>
+                  <view class="dec">
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view>
+              </view>
+            </view>
+          </view>
+          <view class="right">
+            <view wx:for="{{list}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+              <view class="latestVideoLeftitem" wx:if="{{index%2==1}}">
+                  <view class="videoplay_btn">
+                      <view  class="play" >
+                   <image bindtap="tabVideo"  data-id="{{item.id}}" data-watchCount="{{item.watchCount}}" src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+                   </view>
+                   <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" data-id="{{item.id}}"  data-watchCount="{{item.watchCount}}"></image>
+                  
+                    <view class="activeBox">
+                      <view class="watchCount">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}播放</view>
+                      <view class="heartCount ">
+                        <image src="/image/heartCount.png"></image>{{item.heartCount}}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="dec">
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class = "{{currentTab == 1 ? 'showCurrentTab':'hiddenCurrentTab'}}">
+          <view class="left">
+            <view wx:for="{{hostVideoList}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+              <view class="latestVideoLeftitem" wx:if="{{index%2==0}}">
+                  <view class="videoplay_btn">
+                       <view  class="play" bindtap="tabVideo"  data-id="{{item.id}}" data-watchCount="{{item.watchCount}}">
+                   <image src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+                   </view>
+                   <image src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix"  bindtap="myVideo" data-id="{{item.id}}"></image>
+                  
+                 
+                    <view class="activeBox">
+                      <view class="watchCount">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}播放</view>
+                      <view class="heartCount ">
+                        <image src="/image/heartCount.png"></image>{{item.heartCount}}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="dec">
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view>
+                </view>
+            </view>
+          </view>
+          <view class="right">
+            <view wx:for="{{hostVideoList}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+              <view class="latestVideoLeftitem" wx:if="{{index%2==1}}">
+                  <view class="videoplay_btn">
+                    <view  class="play" bindtap="tabVideo"  data-id="{{item.id}}" data-watchCount="{{item.watchCount}}">
+                   <image src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+                   </view>
+                   <image src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix"  bindtap="myVideo" data-id="{{item.id}}"></image>
+                    <view class="activeBox">
+                      <view class="watchCount">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}播放</view>
+                      <view class="heartCount ">
+                        <image src="/image/heartCount.png"></image>{{item.heartCount}}
+                      </view>
+                    </view>
+                  </view>
+                  <view class="dec">
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view>
+              </view>
+            </view>
+          </view>
+        </view>
+  </view>
+  </scroll-view> 
+</view>

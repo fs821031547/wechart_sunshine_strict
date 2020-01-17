@@ -1,0 +1,212 @@
+/* pages/coachSearch/coachSearch.wxss */
+@import "../../pages/home/home.wxss";
+.ht95{height:140rpx;}
+.header-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100rpx;
+    z-index: 199;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    height: 65rpx;
+    background-color: #f5f5f5;
+    border-radius: 6rpx;
+    width:540rpx;
+}
+
+.search-icon {
+    width: 36rpx;
+    height: 36rpx;
+    margin: 0 16rpx;
+}
+.search-input {
+    width:410rpx;
+    margin-left: 10rpx;
+    font-size: 29.16rpx;
+}
+
+.search-confirm {
+    width: 120rpx;
+    height: 65rpx;
+    margin-left: 20rpx;
+    text-align: center;
+    line-height: 65rpx;
+    font-size: 28rpx;
+    background-color: #ffbe28;
+    color: #ffffff;
+    border-radius: 8rpx;
+    padding-right: 0;
+    margin-right:0rpx;
+
+}
+
+.confirm-active {
+    background-color: #e62424;
+}
+
+.coachNo{line-height: 100%; text-align: center; position: absolute;top: 50%; display: block;width: 100%;font-size: 30rpx; color: #999;  margin-top: -200rpx;}
+.coachNo .ings{width:300rpx; height:217rpx; margin: 0 auto; margin-bottom:40rpx;}
+/* .showGetCoupleModal{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background: rgb(0,0,0,0.9);
+    z-index: 3000;
+    top: 0;
+    left: 0;
+}
+.getCoupleSuccess{
+  display: flex;
+  justify-content: center;
+  position: relative;
+} */
+.showGetCoupleModal {
+  position: fixed;
+  background: rgba(0, 0, 0,0.6);
+  z-index: 3000;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom:0
+}
+.getCoupleSuccess {
+  position: relative;
+  z-index: 3002;
+}
+
+.getCoupleSuccess image {
+  width: 580rpx;
+  height: 800rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+  left:102rpx;
+}
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -240rpx;
+  display: flex;
+  left: 160rpx;
+}
+/* 
+.getCoupleSuccess image{
+margin-top:200rpx;
+  width: 580rpx;
+  height: 800rpx;
+}
+.getCoupleSuccess .form{
+  position: absolute;
+  bottom: 140rpx;
+  width: 380rpx;
+  height: 230rpx;
+}
+.formClose image{
+width: 60rpx;
+height: 60rpx;
+position: absolute;
+bottom: -240rpx;
+display: flex;
+left: 160rpx;
+} */
+/* 找他学车 */
+.findCoachLearnCar{
+  background:#ffbe28
+}
+.goldCoach{
+    width: 120rpx;
+  height: 64rpx;
+  position: absolute;
+ left: -14rpx;
+bottom: -28rpx;
+}
+.avatar {
+  position: relative;
+}
+.lookMore {
+top: 100rpx;
+right: 72rpx;
+color: #fff;
+z-index: 240;
+font-size: 28rpx;
+text-align: center;
+}
+/* 领取优惠券开始 */
+
+.getCoupleSuccess .singleCoachDesc{
+  position: absolute;
+  bottom: 190rpx;
+  height: 228rpx;
+  width: 500rpx  !important;
+  left:80rpx !important;
+}
+
+/* 领取优惠券结束 */
+/* 报名开始 */
+.getCoupleSuccess  .signLearnCar{
+  position: absolute;
+bottom: 90rpx;
+width: 380rpx;
+height: 230rpx;
+left: 102rpx;
+}
+.getCoupleSuccess  .coupleDesc{
+  position: absolute;
+  bottom: 350rpx;
+  width: 380rpx;
+  height: 50rpx;
+  left:102rpx;
+  z-index:4000
+}
+.form .userName,.form .userTel {
+height: 70rpx!important;
+margin-top: 16rpx !important;
+}
+.coupleDesc .form-title1::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  height: 8rpx;
+  left: 6rpx;
+  width: 356rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+.coupleDesc .form-title2{
+  padding-top:4rpx;
+}
+.coupleDesc .form-title2::after{
+  content: '';
+  position: absolute;
+  bottom:-44rpx;
+  height: 8rpx;
+  left: 6rpx;
+  width:268rpx;
+  background: #ffde93;
+  z-index: -1;
+}
+.signLearn image {
+width: 60rpx;
+height: 60rpx;
+position: absolute;
+bottom: -200rpx !important;
+display: flex;
+left: 160rpx;
+}
+
+/* 报名结束 */

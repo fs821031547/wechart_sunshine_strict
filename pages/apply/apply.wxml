@@ -1,0 +1,35 @@
+<view class='applybg'>
+  <image class='imgw' src="/image/Special/bg.png" mode="widthFix" />
+</view>
+<view class='coachimg'>
+  <image class='imgw' src="/image/Special/coach.png" mode="widthFix" />
+</view>
+<view class='applybox'>
+  <view class='com-selectBox'>
+    <view class='com-sContent' bindtap='selectToggle'>
+      <view class='com-sTxt'>{{nowText}}</view>
+      <image src='../../image/up.png' class='com-sImg' animation="{{animationData}}"></image>
+    </view>
+    <view class='com-sList' wx:if="{{selectShow}}">
+      <view wx:for="{{classType}}" data-index="{{index}}" data-id="{{data.id}}" wx:key='' class='com-sItem' bindtap='setText'>{{item.name}}</view>
+    </view>
+  </view>
+  <view class="weui-cell">
+    <input class="weui-input" placeholder="请输入姓名"  bindinput="inputname"/>
+  </view>
+  <view class="weui-cell">
+    <input class="weui-input" placeholder="请输入手机号码" bindinput="inputmobile" />
+    <button type="primary" class='button' disabled='{{!canSend}}' ontap="send">{{paracont}}</button>
+  </view>
+  <view class="weui-cell">
+    <input class="weui-input" placeholder="请输入验证码"  bindinput="inputcode"/>
+  </view>
+  <view class="weui-cell butyes">
+    <button type="primary" bindtap="submit">提交信息</button>
+    <button type="primary" bindtap="submitPay">预付定金</button>
+  </view>
+  <view class='caption'>
+    <view>预付定金在报名成功之后</view>
+    <view>可额外获取100-500元的随机微信红包！</view>
+  </view>
+</view>

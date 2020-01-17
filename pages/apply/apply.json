@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "报名",
+  "navigationBarBackgroundColor": "#ff3212",
+  "navigationBarTextStyle": "white",
+  "usingComponents": {
+    "Select": "/componet/select/select"
+  },
+  "enablePullDownRefresh": false
+}

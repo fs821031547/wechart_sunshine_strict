@@ -1,0 +1,37 @@
+<!-- <view class='personalbg'>
+<button wx:if="{{!token}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo">
+    <view class='Headicon'><image src="/image/default.png" class='imgw'  mode="widthFix"/></view>
+    <view class='Headpu'>登录</view>
+  </button>
+  <block wx:if="{{token}}">
+    <view class='Headicon'><image src="{{photo}}" class='imgw'  mode="widthFix"/></view>
+    <view class='Headpu'>{{name}}</view>
+  </block>
+  </view> -->
+<view class="login" style="height:{{systemHieght}}px">
+  <view class="userApply">
+    <view class='loginLogo'>
+      <image src="/image/loginLogo.png" class='imgw' mode="widthFix" />
+    </view>
+    <view>阳光学车申请使用</view>
+    </view>
+  <view class="infoTitle">以下信息</view>
+  <view class="infoContain">
+  <view  class='loginLogo'>
+  <image src="/image/loginCicle.png" class='imgw' mode="widthFix" />
+  </view>
+  <view class="texst">你的账号信息（昵称、头像、地区及性别）</view></view>
+
+ <view class="btn">
+  <view class="agreeLogin">
+    <button wx:if="{{!token}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="getUserInfoBtn">
+      <view class='Headpu'>同意</view>
+    </button>
+  </view>
+  <view class="disAgreeLogin">
+    <button wx:if="{{!token}}" bindtap="goToHome" class="getUserInfoBtn">
+      <view class='Headpu'>取消</view>
+    </button>
+  </view>
+ </view>
+</view>

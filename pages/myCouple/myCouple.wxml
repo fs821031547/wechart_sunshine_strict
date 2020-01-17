@@ -1,0 +1,87 @@
+<view class="contain">
+  <view class="tipTitle" wx:if="{{showTipTitle}}">
+    <view class="left tipTitleItem">
+      <icon type="warn" size="20" color="#FFBE00"></icon>
+    </view>
+    <view class="middle tipTitleItem">
+      <text class="middle tipTitleItem fontSize-27 ">已提交报名信息的用户，凭券到线下门店报名学车即可享受优惠</text>
+    </view>
+    <view class="right tipTitleItem close" bindtap="closeTipTitle">
+      <image src="/image/couple-close.png"></image>
+    </view>
+  </view>
+  <view class="coupleList">
+    <block wx:for="{{couponReceived}}" wx:for-index="index" wx:for-item="item" wx:key="key">
+      <view class="coupleListItem platForm" wx:if="{{item.type==1}}">
+        <image src="/image/platform.png"></image>
+        <view class="leftCouple">
+          <view class="money">
+            <text class="fontSize-24 sign">￥</text>
+            <text class="fontSize-50 price">{{item.moneyYuan}}</text>
+          </view>
+          <view class="lable">
+            <text class="fontSize-22">全平台无门槛</text>
+          </view>
+        </view>
+        <view class="rightCouple">
+          <view>
+            <text class="fontSize-28">{{item.name}}</text>
+          </view>
+          <view class="validTime">
+            <text class="fontSize-22">有效期至：{{item.endingEffectiveTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="coupleListItem jiaxiao" wx:if="{{item.type==2}}">
+        <image src="/image/jiaxiao.png"></image>
+        <view class="leftCouple">
+          <view class="money">
+            <text class="fontSize-24 sign">￥</text>
+            <text class="fontSize-50 price">{{item.moneyYuan}}</text>
+          </view>
+             <view class="lable">
+            <text class="fontSize-22"> 满{{item.beginningApplicableMoney/100}}元可用</text>
+          </view>
+        </view>
+        <view class="rightCouple">
+          <view>
+            <text class="fontSize-28">{{item.name}}</text>
+          </view>
+          <view class="validTime">
+            <text class="fontSize-22">有效期至：{{item.endingEffectiveTime}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="coupleListItem coach" wx:if="{{item.type==3}}">
+        <image src="/image/coach.png"></image>
+        <view class="leftCouple">
+          <view class="money">
+            <text class="fontSize-24 sign">￥</text>
+            <text class="fontSize-50 price">{{item.moneyYuan}}</text>
+          </view>
+          <view class="lable">
+            <text class="fontSize-22"> 满{{item.beginningApplicableMoney/100}}元可用</text>
+          </view>
+        </view>
+        <view class="rightCouple">
+          <view>
+            <text class="fontSize-28">{{item.name}}</text>
+          </view>
+          <view class="validTime">
+            <text class="fontSize-22">有效期至：{{item.endingEffectiveTime}}</text>
+          </view>
+        </view>
+      </view>
+    </block>
+  </view>
+</view>
+
+
+  <block>
+<view class="errPage" style="height:{{systemHieght}}px" wx:if="{{errTip}}">
+  <view>
+    <image src="http://img.91ygxc.com/filestore1/M00/34/CF/rBLZzl2tcsaAFO8yAABRGfTqYJg039.png" class="errImgWH" style="margin-top:{{(systemHieght-134)/2-88}}px"></image>
+    <view class="errDesc" style="margin-top:30px">暂时没有消息</view>
+  </view>
+</view>
+</block>

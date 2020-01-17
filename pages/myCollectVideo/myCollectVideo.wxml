@@ -1,0 +1,75 @@
+
+<view>
+  <view class="latestVideoCon">
+    <scroll-view scroll-y="true">
+      <view class="left">
+        <view wx:for="{{list}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+          <view class="videoplay_btn" wx:if="{{index%2==0}}">
+              <view class="play" >
+                <image bindtap="tabVideo" data-id="{{item.id}}" data-watchCount="{{item.watchCount}}" src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+              </view>
+              <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" data-id="{{item.id}}" 
+                  data-watchCount="{{item.watchCount}}"></image>
+              <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo"
+              data-id="{{item.id}}"
+data-watchCount="{{item.watchCount}}"></image>
+              <view class="activeBox">
+                <view class="watchCount">
+                  <text style="margin-right:4rpx;">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}</text>
+                  <text>播放</text>
+                </view>
+                <view class="heartCount ">
+                  <image src="/image/heartCount.png"></image>{{item.heartCount}}
+                </view>
+            </view>
+           
+          </view>
+           <view class="dec" wx:if="{{index%2==0}}">
+           <!-- <text class="fontSize-24" wx:if="{{index%2==0}}">{{item.desc}}</text> -->
+              <text class="fontSize-24" wx:if="{{item.desc==null}}" >这个视频真搞笑</text>
+              <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+            </view>
+        </view>
+      </view>
+      <view class="right">
+        <view wx:for="{{list}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+          <view class="videoplay_btn" wx:if="{{index%2==1}}">
+            <view class="play">
+              <image  bindtap="tabVideo" data-id="{{item.id}}" data-watchCount="{{item.watchCount}}" src="https://jxtt-h5-1258058953.cos.ap-guangzhou.myqcloud.com/images/videoplay_btn.png" style="width: 92rpx;height: 92rpx;position: absolute;z-index: 122;top:{{(item.height/2-170)/2}}rpx"></image>
+            </view>
+             <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" data-id="{{item.id}}" 
+                  data-watchCount="{{item.watchCount}}"></image>
+             <image style="width:350rpx;" src="{{item.coverImageUrl}}" class="myVideo" mode="widthFix" bindtap="myVideo" data-id="{{item.id}}" data-watchCount="{{item.watchCount}}"></image>
+
+            <view class="activeBox">
+              <view class="watchCount">
+                <text style="margin-right:4rpx;">{{item.watchCount>10000?(((item.watchCount-item.watchCount%1000)/10000+'W')):(item.watchCount)}}</text>
+                <text>播放</text>
+              </view>
+              <view class="heartCount ">
+                <image src="/image/heartCount.png"></image>{{item.heartCount}}
+              </view>
+            </view>
+          
+          </view>
+          <!-- <view class="dec"> -->
+           <!-- <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text> -->
+            <!-- </view> -->
+             <view class="dec" wx:if="{{index%2==1}}">
+              <!-- <text class="fontSize-24" >{{item.desc}}</text> -->
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}">这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
+<block>
+  <view class="errPage" style="height:{{systemHieght}}px" wx:if="{{errTip}}">
+    <view>
+      <image src="http://img.91ygxc.com/filestore1/M00/34/CF/rBLZzl2tcsaAFO8yAABRGfTqYJg039.png" class="imgWH" style="margin-top:{{(systemHieght-134)/2-88}}px"></image>
+      <view class="errDesc" style="margin-top:30px">还没有收藏小视频</view>
+    </view>
+  </view>
+</block>

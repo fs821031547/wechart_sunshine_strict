@@ -1,0 +1,14 @@
+.Rntit{width: 320rpx;height: 37rpx; margin: 0 auto;padding-top: 50rpx; margin-bottom:30rpx;}
+.RnBox{background-color: #fff; margin: 0 30rpx;border-radius:18rpx;font-size:30rpx;color: #666; padding:35rpx;}
+.RnBox .title{background-color: #c8161d;color: #fff; display: inline-block;font-size:30rpx;padding:10rpx 30rpx;border-radius: 0 50rpx 50rpx 0; margin-left: -35rpx; margin-bottom:15rpx;}
+.RnBox .txtle{padding-left: 140rpx; text-indent: -140rpx;}
+.RnBox .txtle .Ls{letter-spacing:58rpx;}
+.RnBox .txtle .Ls2{letter-spacing:16rpx;}
+
+.LcBox{background-color: #fff; margin: 0 30rpx;border-radius:18rpx;font-size:30rpx;color: #666; padding:50rpx;}
+.array{border-left:6rpx solid #c8161d; padding-left:40rpx;position: relative; padding-bottom: 40rpx;}
+.array .dig{width: 42rpx; height: 42rpx;background-color: #c8161d; color: #fff;font-size: 26rpx;text-align: center;line-height: 38rpx;border-radius:50rpx;position: absolute;top: 0;left: -21rpx;}
+.array .title{color: #333;font-weight: 700;margin-bottom: 20rpx;}
+.array .txtle{color: #666;font-size: 26rpx; line-height:38rpx;}
+
+.nobr{border-left:6rpx solid #fff;padding-bottom:0rpx; }

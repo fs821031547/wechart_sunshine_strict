@@ -1,0 +1,195 @@
+.coupon-list-box {
+  padding: 10px 15px;
+  overflow: hidden;
+}
+
+.coupon-item {
+  display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  margin: 10px 0;
+  width: 100%;
+  float: left;
+}
+
+.coupon-main {
+  flex: 1;
+  -webkit-box-flex: 1;
+  background: #fff;
+  height: 128px;
+  box-sizing: border-box;
+  border-radius: 5px 0 0 5px;
+}
+
+.coupon-left {
+  width: 35%;
+  float: left;
+  padding: 30px 20rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.coupon-left::after {
+  content: '';
+  position: absolute;
+  top: 30px;
+  bottom: 30px;
+  width: 0px;
+  right: 0;
+  border-left: 1px dashed #e5e5e5;
+}
+
+.coupon-right {
+  width: 64%;
+  padding: 30px 0;
+  float: left;
+  padding-left: 10rpx;
+  box-sizing: border-box;
+}
+
+.coupon-btn {
+  width: 162rpx;
+  background: #6e9fff;
+  text-align: center;
+  font-size: 40rpx;
+  height: 128px;
+  color: #fff;
+  position: relative;
+  padding: 60rpx 30rpx;
+  box-sizing: border-box;
+  border-radius: 0 5px 5px 0;
+}
+
+.coupon-btn.coupon-2 {
+  background: #ff8451;
+}
+
+.coupon-btn.coupon-3 {
+  background: #f74949;
+}
+
+.coupon-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -25px;
+  bottom: 0;
+  width: 26px;
+  background: url('http://chuantu.xyz/t6/702/1569477786x977013264.png') no-repeat;
+  /* http://chuantu.xyz/t6/702/1569478043x977013264.png *//* http://chuantu.xyz/t6/702/1569478076x977013264.png */
+  background-size: cover;
+}
+
+.coupon-btn.coupon-2::before {
+  background: url('http://chuantu.xyz/t6/702/1569478043x977013264.png') no-repeat;
+}
+
+.coupon-btn.coupon-3::before {
+  background: url('http://chuantu.xyz/t6/702/1569478076x977013264.png') no-repeat;
+}
+
+.coupon-price {
+  color: #f74949;
+  font-size: 30px;
+  height: 40px;
+  /* overflow: hidden; */
+}
+
+.coupon-desc {
+  color: #f74949;
+  font-size: 15px;
+  height: 20px;
+  overflow: hidden;
+}
+
+.coupon-price-tag {
+  font-size: 14px;
+  display: inline;
+}
+
+.coupon-title {
+  font-size: 38rpx;
+  height: 40px;
+  line-height: 40px;
+  width: calc(100% - 20px);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+.coupon-date {
+  color: #a3a3a3;
+  font-size: 12px;
+  z-index: 999;
+  position: absolute;
+}
+
+.showGetCoupleModal {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background: rgb(0, 0, 0, 0.9);
+  z-index: 99999;
+  top: 0;
+  left: 0;
+}
+
+.getCoupleSuccess {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.getCoupleSuccess image {
+  margin-top: 140rpx;
+  width: 580rpx;
+  height: 840rpx;
+}
+
+.getCoupleSuccess .form {
+  position: absolute;
+  bottom: 120rpx;
+  width: 380rpx;
+  height: 230rpx;
+}
+
+.weui-input {
+  background-color: #f2f2f2;
+  margin-top: 24rpx;
+  height: 80rpx;
+}
+
+.place-holder {
+  font-size: 24rpx;
+  padding: 0rpx 20rpx;
+}
+
+.weui-input .submit {
+  background-color: #ffbe28 !important;
+}
+
+.formClose image {
+  width: 60rpx;
+  height: 60rpx;
+  position: absolute;
+  bottom: -214rpx;
+  display: flex;
+  left: 160rpx;
+}
+
+.textcontact {
+  position: absolute;
+  height: 90rpx;
+  bottom: 330rpx;
+  z-index: 9999;
+}
+
+.textcontact text {
+  font-size: 32rpx;
+}
+
+.submit {
+  color: #fff;
+  margin-top: 20rpx;
+  background: #ffbe28;
+}

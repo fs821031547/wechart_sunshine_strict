@@ -1,0 +1,61 @@
+<view class='ht80'></view>
+<view class='floatTab'>
+  <view class='tabtxt'>
+    <view class='com-selectBox'>
+      <view class='com-sContent' bindtap='selectToggle' data-index="0">
+        <view class='com-sTxt'>{{selectCarName}}</view>
+        <image src='../../image/up2.png' class='com-sImg' animation="{{animationData[0]}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class='tabtxt'>
+    <view class='com-selectBox'>
+      <view class='com-sContent' bindtap='selectToggle' data-index="1">
+        <view class='com-sTxt'>{{selectSexName}}</view>
+        <image src='../../image/up2.png' class='com-sImg' animation="{{animationData[1]}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class='tabtxt'>
+    <view class='com-selectBox'>
+      <view class='com-sContent' bindtap='selectToggle' data-index="2">
+        <view class='com-sTxt'>{{selectInsName}}</view>
+        <image src='../../image/up2.png' class='com-sImg' animation="{{animationData[2]}}"></image>
+      </view>
+    </view>
+  </view>
+  <view class='com-sList' wx:if="{{isShow}}">
+    <view wx:for="{{selectArray[currentIndex]}}" wx:for-item="data" wx:key="" data-id="{{data.id}}" data-text="{{data.text}}" class='com-sItem' bindtap='clickSelect'>{{data.text}}</view>
+  </view>
+</view>
+
+<view class='position' wx:if="{{false}}">
+  <image class='imgw' src="/image/Pos.png" mode="widthFix" />定位失败，点击
+  <text>重新获取</text>
+</view>
+
+<scroll-view style="height:{{windowHeight-80}}rpx" scroll-y bindscrolltolower="loadMore">
+  <view class='coachbox'>
+    <block wx:for="{{coachlist}}" wx:for-item="data" wx:key="">
+      <view class='coachli' data-id="{{data.id}}" ontap="goDetail">
+        <view class='coachPC'>
+          <view class='imgbox'>
+            <image src="{{data.headImg}}" class='imgw' mode="aspectFill" />
+          </view>
+          <view class='posd'>
+            <image class='imgw' src="/image/Pos2.png" mode="widthFix" />
+            <text>{{data.district}}</text>
+          </view>
+          <view class='firstname'>{{data.name}}
+            <text>{{data.sex==2?'女':'男'}}</text>
+            <text>{{data.teachPermitted}}</text>
+          </view>
+        </view>
+        <view class='coachtitle'>
+          <text class='ts1'>{{data.insName}}</text>
+          <text class='ts2'>{{data.driving}}年教龄</text>
+        </view>
+      </view>
+    </block>
+  </view>
+</scroll-view>

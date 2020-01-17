@@ -1,0 +1,48 @@
+<scroll-view style="height:{{windowHeight-80}}rpx" scroll-y bindscrolltolower="loadMore">
+  <block wx:for="{{list}}" wx:for-item="data" wx:key="">
+    <view class='OrderBox {{data.payStatus == 3 ? "Invalid":""}}'>
+      <view class='podT' wx:if="{{data.status==1 || data.payStatus==2 || data.payStatus==3}}">
+        <image wx:if="{{data.payStatus==3}}" class='imgw' src="/image/Refunded.png" mode="widthFix" />
+        <image wx:elif="{{data.payStatus==2}}" class='imgw' src="/image/Torefunded.png" mode="widthFix" />
+        <image wx:elif="{{data.status==1}}" class='imgw' src="/image/finish.png" mode="widthFix" />
+      </view>
+      <view class='title'>
+        <view class='tit'>预约报名记录</view>
+        <view class='dat'>{{data.createTime}}</view>
+      </view>
+      <view class='gap'></view>
+      <view class='txtle'>
+        <view class='txt flex'>
+          <text class='c999 win200'>教练：</text>
+          <text class='mr10'>{{data.coachName}}</text>
+          <text class='Model'>{{data.insName}}</text>
+          <text class='Model'>教龄{{data.coachDriving}}年</text>
+          <text class='Model'>{{data.vehicleType}}</text>
+        </view>
+        <view class='txt flex'>
+          <text class='c999 win200'>手机：</text>
+          <text>{{data.mobile}}</text>
+        </view>
+        <view class='txt flex'>
+          <text class='c999 win200'>车场：</text>
+          <text class='frs'>{{data.drivingFieldName}}</text>
+        </view>
+      </view>
+      <view class='butbox'>
+        <text class='Prepaid'>预付金:</text>
+        <text class='money'>￥{{data.payFee?data.payFee/100:0}}</text>
+        <view class='buttonfrs'>
+          <button wx:if="{{data.status==-1}}" type="button" class='buttona'>已关闭</button>
+          <button wx:elif="{{data.payStatus==2}}" type="button" class='buttona' data-id="{{data.id}}" ontap="cancelRefund">取消退费</button>
+          <button wx:elif="{{data.payStatus==1}}" type="button" class='buttonb' data-id="{{data.id}}" ontap="refund">申请退款</button>
+          <block wx:elif="{{data.status==1}}">
+            <button wx:if="{{!data.commentId}}" type="button" class='buttona' data-id="{{data.id}}" data-coach="{{data.coachId}}" ontap="goAssess">去评价</button>
+          </block>
+          <button wx:elif="{{data.payStatus==0}}" type="button" class='buttonb' data-id="{{data.id}}">未付款</button>
+          <button wx:else="{{data.status==0}}" type="button" class='buttona' data-id="{{data.id}}" ontap="confirm">确认成交</button>
+          <button wx:if="{{data.commentId}}" type="button" class='buttonb'>已评价</button>
+        </view>
+      </view>
+    </view>
+  </block>
+</scroll-view>

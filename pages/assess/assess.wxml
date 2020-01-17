@@ -1,0 +1,34 @@
+<view class='pam30'>
+
+  <view class='StarBox'>
+    <view class='Star'>
+      <block wx:for="{{[1,2,3,4,5]}}">
+        <view data-index="{{index}}" ontap="clickStar">
+          <image wx:if="{{index+1>star}}" src="/image/StarDb.png" class='imgw' mode="widthFix" />
+          <image wx:else="" src="/image/StarDa.png" class='imgw' mode="widthFix" />
+        </view>
+      </block>
+    </view>
+    <view class='Des'>{{starStr[star]}}</view>
+  </view>
+
+  <view class='Option'>
+    <block wx:for="{{options}}" wx:for-item="data" wx:key="">
+      <view wx:if="{{data.star==star}}" data-index="{{index}}" class='Optionli {{data.check?"OptionliYes":""}}' ontap="clickOption">
+        <view>{{data.optionName}}</view>
+        <view class='OptionIMG'>
+          <image src="/image/OptionOK.png" class='imgw' mode="widthFix" />
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <view class='DesTXT'>
+    <textarea auto-focus="true" style="height: 3em"  bindinput="inputcomment"/>
+  </view>
+
+  <view class='butRaise'>
+    <button type="primary" ontap="submit">提 交</button>
+  </view>
+
+</view>

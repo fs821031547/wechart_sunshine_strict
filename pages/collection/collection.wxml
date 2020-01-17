@@ -1,0 +1,32 @@
+  <view class='coachbox'>
+    <block wx:for="{{list}}" wx:for-item="data" wx:key="">
+      <view class='coachli' data-id="{{data.id}}" ontap="goDetail">
+        <view class='coachPC'>
+          <view class='imgbox'>
+            <image src="{{data.headImg}}" class='imgw' mode="aspectFill" />
+          </view>
+          <!-- <view class='posd'>
+            <image class='imgw' src="/image/Pos2.png" mode="widthFix" />
+            <text>{{data.district}}</text>
+          </view> -->
+          <view class='firstname'>{{data.name}}
+            <text>{{data.sex==2?'女':'男'}}</text>
+            <text>{{data.teachPermitted}}</text>
+          </view>
+        </view>
+        <view class='coachtitle'>
+          <text class='ts1'>{{data.insName}}</text>
+          <text class='ts2'>{{data.driving}}年教龄</text>
+        </view>
+      </view>
+    </block>
+  </view>
+
+  <block>
+<view class="errPage" style="height:{{systemHieght}}px" wx:if="{{errTip}}">
+  <view>
+    <image src="http://img.91ygxc.com/filestore1/M00/34/CF/rBLZzl2tcsaAFO8yAABRGfTqYJg039.png" class="imgWH" style="margin-top:{{(systemHieght-134)/2-88}}px"></image>
+    <view class="errDesc" style="margin-top:30px">还没有收藏的教练</view>
+  </view>
+</view>
+</block>

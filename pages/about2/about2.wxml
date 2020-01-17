@@ -1,0 +1,713 @@
+<view class='QaImg'>
+  <image src="/image/Int/Qa.jpg" class='imgw' mode="widthFix" />
+</view>
+
+<view class='QaBox' data-index="0" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[0]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    阳光学车与驾校是什么关系？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[0]}}">阳光学车是品牌驾校优质教练员信息和各区域训练场信息的展示平台，也是一款严选教练员平时服务学员和传播教练员个人介绍的助手工具，作为驾校和教练的助推手，为学员提供优质教练信息及相关服务。打个比方，就是类似华为格力美的等优质品牌在京东上卖东西，京东负责展示优质产品及销售送货等服务，供应商负责产品研发和生产。</view>
+</view>
+
+<view class='QaBox' data-index="1" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[1]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    阳光学车与其他互联网学车平台有什么不同？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[1]}}">每个地方每个驾校的教练员队伍都参差不齐，盲目报名容易被分到不好的教练员，学车经历必将是苦不堪言叫苦连天，非常之痛苦。阳光学车就是品牌驾校优质资源的展示平台和选购平台，减少学员学车困惑，有个好师傅是首当其冲、一好百好的事情，另外学员报名到哪个驾校受理、跟什么教练练车、在哪里练车、多少费用？非常透明清楚，没有丝毫遮遮掩掩。互联网学车平台一般号称自己是学车培训机构，有自己的车辆和训练场甚至考场。殊不知每个城市的驾校、教练车、训练场和考场均是有政府许可资质的，不是说是谁的就是谁的，然后就是裹挟这互联网+称号，一味打价格战招揽学员。阳光学车提供优质内核的高性价比服务，其他互联网仅提供低价服务。这应该是两者最大的不同吧。</view>
+</view>
+
+<view class='QaBox' data-index="2" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[2]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    学员报名放心吗？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[2]}}">学员要报名可以在阳光学车小程序上选择附近训练场上的优秀教练员报名，报名手续一般由阳光学车通知教练员所在驾校的工作人员上门办理，或交由阳光学车代办理，在线上或线下预约点完成支付及报名手续，学车款项均由政府（深圳市）统一监管，这个不存在任何资金风险的问题。</view>
+</view>
+
+<view class='QaBox' data-index="3" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[3]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    教练员服务出现问题找谁解决？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[3]}}">教练员所在驾校均设有服务热线，并在每台教练车上张贴，如出现吃拿卡要或服务态度恶劣等问题，均可直接拨打驾校服务热线反映，一般均能得到快速合理解决，若驾校解决不了，即拨打阳光学车服务监督热线4007786707反馈解决，一般问题在24小时内处理完毕，若学员把出现的问题即使驾校解决了也反馈到阳光学车，本平台将做好记录，对严选教练起到公开监督的作用。</view>
+</view>
+
+<view class='QaBox' data-index="4" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[4]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    学车过程若换教练或换场地怎么处理？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[4]}}">每个训练场都有三到五严选的优秀教练，若确实发生个别问题，可以换到其他教练员继续 学车，阳光学车将有50个训练场覆盖全市，换场地的要求一般都能得到解决。
+  </view>
+</view>
+
+<view class='QaBox' data-index="5" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[5]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    有时你们价格非常实惠，这个可靠吗？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[5]}}">阳光学车作为一个新型驾培模式，提供的是学员直达优秀教练员的服务，并直接与学员所在企业或就近企业合作，学员可以在企业学车特约服务点咨询报名，也可以在阳光学车小程序上报名，省去中间门店和广告宣传费用；另外，阳光学车为每位优秀教练员打造个人详情IP，通过教练员自我微信传播和老学员助推转发给好友，实现零成本营销的作用。 一般门店租金和人工在1万元，月招生15人左右，门店招生成本就有七八百每人，还有比如某些烧钱打广告的学车公司，一般获客成本也要接近八百元每人，阳光学车不依靠门店，也基本不依靠广告烧钱，省下的费用就是优惠给学员的费用，所以学车直达严选教练员的学费实惠是很靠谱的。
+  </view>
+</view>
+
+<view class='QaBox' data-index="6" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[6]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    在哪里缴交考试费和补考费？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[6]}}">各科目考试费用若查询或补交，请点击 费用流程说明 当然，全包班包了补考费的小伙伴，就不用担心这个问题，由本平台搞定。
+  </view>
+</view>
+
+<view class='QaBox' data-index="7" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='shrink'>
+      <image src="{{isOpen[7]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    多久可以考到驾照？
+  </view>
+  <view class='txtleBox' wx:if="{{isOpen[7]}}">目前深圳市有科目二考场9个、科目三考场8个，政府相关规定是30天左右考一个科目，一般情况下三个半月就可以考到驾照，前提是学员自己要有时间保持每周2-3次练车，还有教练师傅是否勤恳教学，晚上和周末也能教学很关键，不设置障碍比如修车开会考试等等借口（现在黑心教练不会直接要钱），为难学员给钱才给练，也就是学员和教练两者要互相配合，才能确保较快速考到驾照。阳光学车提供的优秀教练，基本杜绝了教练员设置障碍为难学员这个做法，确保勤快学员快速考驾照。</view>
+</view>
+
+<view class='QaBox' data-index="8" ontap="trigger">
+  <view class='titleBox mb30'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+     <view class='shrink'>
+      <image src="{{isOpen[8]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    在哪里做体检？
+  </view>
+
+  <view wx:if="{{isOpen[8]}}">
+
+    <view class='liBox'>
+      <view class='region'>福田</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市北大医院</view>
+          <button class='phone' data-photo="0755-83923333" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />福田区莲花路1120号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市第四人民医院</view>
+          <button class='phone' data-photo="0755-83982222" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深南中路3025号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳口岸医院</view>
+          <button class='phone' data-photo="13421834489" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳口岸医院三楼</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>福田区人民医院第三分院</view>
+          <button class='phone' data-photo="0755-82421531" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市福田区八卦路56号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>罗湖</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市流花医院</view>
+          <button class='phone' data-photo="0755-82140379" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />罗湖区春风路2069号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市武警医院</view>
+          <button class='phone' data-photo="0755-82699862" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />罗湖区金湖路8号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>罗湖区人民医院</view>
+          <button class='phone' data-photo="0755-82286166" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />罗湖区友谊路医技楼2楼体检中心</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市人民医院</view>
+          <button class='phone' data-photo="0755-81839668" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市东门北路1017号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市罗湖区中医院</view>
+          <button class='phone' data-photo="0755-82311566" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市罗湖区乐园路83号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>南山</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市南山区人民医院</view>
+          <button class='phone' data-photo="0755-26632772" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />南山区西丽车管所3栋</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市南山区人民医院</view>
+          <button class='phone' data-photo="0755-26553111" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />南山区桃源路89号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市西丽人民医院</view>
+          <button class='phone' data-photo="0755-26730142" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />南山区西丽留仙大道2051号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>盐田</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市盐田区盐港医院</view>
+          <button class='phone' data-photo="13543253558" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />盐田区东海道</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市盐田区人民医院</view>
+          <button class='phone' data-photo="0755-25215732" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />盐田区沙头角梧桐路2032号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>宝安</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市宝安区中医院</view>
+          <button class='phone' data-photo="0755-27801088" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区30区裕安二路25号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市宝安区福永人民医院</view>
+          <button class='phone' data-photo="0755-27395654" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区福永街道德丰路83号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市宝安区人民医院</view>
+          <button class='phone' data-photo="0755-27788311" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区龙井二路118</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市沙井人民医院</view>
+          <button class='phone' data-photo="0755-27722241" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区沙井大街3号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市石岩人民医院</view>
+          <button class='phone' data-photo="0755-27607049" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区石岩街道吉祥路11号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳宝安区松岗人民医院</view>
+          <button class='phone' data-photo="0755-27710973" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区松岗镇沙江路2号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>龙岗</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市龙岗区第二人民医院</view>
+          <button class='phone' data-photo="0755-28282083" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区布吉吉华路175号6楼</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市第三人民医院</view>
+          <button class='phone' data-photo="0755-61222333" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区布吉布澜路29号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市横岗人民医院</view>
+          <button class='phone' data-photo="0755-28869123" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区横岗松柏路横岗人民医院</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市南湾人民医院</view>
+          <button class='phone' data-photo="0755-28708224" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区南岭村南康路2号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市沙湾医院</view>
+          <button class='phone' data-photo="13612983081" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市龙岗区南湾沙平北路212号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>南澳医院</view>
+          <button class='phone' data-photo="0755-84400309" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市龙岗区南澳街道人民路6号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市龙岗区中医院</view>
+          <button class='phone' data-photo="0755-84584132" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市龙岗区体育新城大运路1号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市龙岗区人民医院</view>
+          <button class='phone' data-photo="0755-28932833" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区中心称爱心路</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>龙岗区中心医院</view>
+          <button class='phone' data-photo="0755-84800958" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市龙岗区深惠路1228号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市龙岗平湖人民医院</view>
+          <button class='phone' data-photo="0755-84685594" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区平湖街道办双拥街77号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市坪地医院</view>
+          <button class='phone' data-photo="0755-84091652" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区坪地镇深惠公路旁</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>坪山</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市坪山新区妇幼保健院</view>
+          <button class='phone' data-photo="0755-84139387" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />坪山新区坑梓龙兴南路6号2栋3楼</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市坪山新区人民医院</view>
+          <button class='phone' data-photo="0755-28825080" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />坪山新区坪山人民路19号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>龙华</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市人民医院龙华分院</view>
+          <button class='phone' data-photo="0755-27745118" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙华新区龙华龙观东路101号</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市龙华人民医院</view>
+          <button class='phone' data-photo="0755-29572571" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙华新区龙华建设东路</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市观澜人民医院</view>
+          <button class='phone' data-photo="0755-28025871" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙华新区观澜大道西</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>光明</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市光明新区人民医院</view>
+          <button class='phone' data-photo="0755-27166937" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />深圳市公明街道松白路339号</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>大鹏</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>深圳市大鹏新区人民医院</view>
+          <button class='phone' data-photo="0755-84303071" catchtap="callMe">
+            <image src="/image/Int/phone.png" class='imgw' mode="widthFix" />
+          </button>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />大鹏新区大鹏新东路149号</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='QaBox' data-index="9" ontap="trigger">
+  <view class='titleBox'>
+    <view class='Qicon'>
+      <image src="/image/Int/Qicon.png" class='imgw' mode="widthFix" />
+    </view>
+     <view class='shrink'>
+      <image src="{{isOpen[9]?'/image/Int/up.png':'/image/Int/down.png'}}" class='imgw' mode="widthFix" />
+    </view>
+    在哪里练车？
+  </view>
+  <view wx:if="{{isOpen[9]}}">
+  <view class='txtleBox mb30'>第一批训练场如下，今后将实现50个以上训练场覆盖全深圳市</view>
+    <view class='liBox'>
+      <view class='region'>福田</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>汽大训练场</view>
+          <view class='square'>8000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />香梅南路香蜜二村对面（汽车大世界）</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>南山</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>东滨训练场</view>
+          <view class='square'>2000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />南山区东滨路86号南华厂区内保安亭旁(城市山林东站台旁)</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>前海丽湾训练</view>
+          <view class='square'>3000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />南山区前海路与兴海路交汇处(丽湾大厦对面)</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>罗湖</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>八卦岭训练场</view>
+          <view class='square'>1500m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />八卦路与八卦四路交汇处</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>赤尾训练场</view>
+          <view class='square'>1000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />福田区华强南路上布码头公交总站旁</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>龙华</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>坂田训练场</view>
+          <view class='square'>6000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />坂田坂雪岗大道南与永香路交界处</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>龙胜训练场</view>
+          <view class='square'>3000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />大浪街道元芬一区4栋旁</view>
+      </view>
+    </view>
+
+    <view class='liBox'>
+      <view class='region'>龙岗</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>龙东训练场</view>
+          <view class='square'>4000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />龙岗区龙东社区龙南路291号米兰家私旁</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>横岗训练场</view>
+          <view class='square'>3000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />横岗排榜路蛇地岭小区9号楼对面</view>
+      </view>
+    </view>
+
+    <view class='liBox liBoxno'>
+      <view class='region'>宝安</view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>固戍训练场</view>
+          <view class='square'>2500m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安固戍红湾三区（宝安大道旁）</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>大铲湾训练场</view>
+          <view class='square'>3500m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安西乡大铲湾辅二路</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>沙井训练场</view>
+          <view class='square'>3000m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />宝安区沙井新区后亭社区大埔中路二号（后亭桥公交站旁）</view>
+      </view>
+      <view class='itemBox'>
+        <view class='tit'>
+          <view>福永训练场</view>
+          <view class='square'>3500m
+            <text class='sup'>2</text>
+          </view>
+        </view>
+        <view class='txt'>
+          <image src="/image/Int/pos.png" class='imgw' mode="widthFix" />福海街道桥头社区黃层二区16号</view>
+      </view>
+    </view>
+  </view>
+</view>

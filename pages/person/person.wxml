@@ -1,0 +1,93 @@
+<!--pages/person/person.wxml-->
+<view class="contain">
+
+<view class='personalbg'>
+<image class="personalbg-image" src="http://img.91ygxc.com/filestore1/M00/3D/4B/rBLZzV3op3WAMOYQAABbSXJ_pFY721.jpg" mode="widthFix"></image>
+  <button wx:if="{{!token}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" style="margin-top: 60rpx;">
+    <view class='Headicon'>
+      <image src="/image/boy.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='Headpu'>登录</view>
+  </button>
+  <view wx:if="{{token}}" class="none-token-block">
+    <view class='Headicon'>
+      <image src="{{photo}}" class='imgw' mode="widthFix" />
+    </view>
+    <view class='Headpu'>{{name}}</view>
+  </view>
+</view>
+<view class="itemCells">
+  <view class="weui-cells weui-cells_after-title r-cells">
+  <button class="adwvBut" open-type="share"><image class="imgw" mode="widthFix" src="/image/ad.jpg" mode="widthFix"></image></button>
+    <navigator class="weui-cell weui-cell_access" ontap="toMyCouple" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn1.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">我的优惠券</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator ontap="toMyVideoMessage" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn2.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">我的消息</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator ontap="toMyCollectVideo" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn3.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">我收藏的视频</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/collection/collection" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn4.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">我收藏的教练</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator url="/pages/browseHistory/browseHistory" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image mode="widthFix" src="/image/perasn/perasn5.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">浏览过的教练</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+  <view class="de15"></view>
+  <view class="weui-cells weui-cells-bottom weui-cells_after-title r-cells">
+    <navigator url="/pages/about/about" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn6.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">关于我们</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+    <navigator open-type="contact" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn7.png" class="cell-hd-image"></image>
+      </view>
+         <view class="weui-cell__bd" >
+      <button open-type="contact" class="perBtn">在线反馈</button>
+      </view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+  
+    </navigator>
+    <!-- <navigator ontap="callMe" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+        <view class="weui-cell__hd">
+            <image src="http://chuantu.xyz/t6/702/1570698865x992245975.png" class="cell-hd-image"></image>
+        </view>
+        <view class="weui-cell__bd">联系我们</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator> -->
+    <navigator url="/pages/follow/follow" class="weui-cell weui-cell_example weui-cell_access" hover-class="weui-cell_active">
+      <view class="weui-cell__hd">
+        <image src="/image/perasn/perasn8.png" class="cell-hd-image"></image>
+      </view>
+      <view class="weui-cell__bd">关注公众号</view>
+      <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+  </view>
+</view>
+</view>

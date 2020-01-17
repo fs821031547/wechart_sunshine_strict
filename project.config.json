@@ -1,0 +1,275 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"enhance": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"nodeModules": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.3",
+	"appid": "wx35ab7499c3acf261",
+	"projectname": "sunshine-strict",
+	"cloudfunctionTemplateRoot": "",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"scripts": {},
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 30,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/person/person",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 1,
+					"name": "预约报名",
+					"pathName": "pages/apply/apply",
+					"query": "id=2&insId=11&drivingFieldId=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "发现",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "首页",
+					"pathName": "pages/home/home",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "预约订单",
+					"pathName": "pages/order/order",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "严选教练",
+					"pathName": "pages/coachList/coachList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 6,
+					"name": "评价",
+					"pathName": "pages/assess/assess",
+					"query": "id=2&coachId=2",
+					"scene": null
+				},
+				{
+					"id": 7,
+					"name": "教练详情",
+					"pathName": "pages/coachDetail/coachDetail",
+					"query": "id=2",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "活动",
+					"pathName": "pages/activity/activity",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "关注公众号",
+					"pathName": "pages/follow/follow",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "介绍-学车流程",
+					"pathName": "pages/about/about",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 11,
+					"name": "介绍-常见问题",
+					"pathName": "pages/about2/about2",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "优势对比",
+					"pathName": "pages/about3/about3",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "介绍-常见问题",
+					"pathName": "pages/login/login",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "city",
+					"pathName": "pages/city/city",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "视频",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/coupon/coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": "优惠券",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myCouple/myCouple",
+					"pathName": "pages/myCouple/myCouple",
+					"query": "我的优惠券",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/coachSearch/coachSearch",
+					"pathName": "pages/coachSearch/coachSearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/coachSearch/coachSearch",
+					"pathName": "pages/coachSearch/coachSearch",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/collection/collection",
+					"pathName": "pages/collection/collection",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/browseHistory/browseHistory",
+					"pathName": "pages/browseHistory/browseHistory",
+					"query": "浏览过的教练",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/videoList/videoList",
+					"pathName": "pages/videoList/videoList",
+					"query": "每个视频",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myVideoMessage/myVideoMessage",
+					"pathName": "pages/myVideoMessage/myVideoMessage",
+					"query": "视频-我的消息",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myCollectVideo/myCollectVideo",
+					"pathName": "pages/myCollectVideo/myCollectVideo",
+					"query": "视频-我收藏的视频",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myCollectVideo/myCollectVideo",
+					"pathName": "pages/myCollectVideo/myCollectVideo",
+					"query": "我收藏的视频",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/activity/activity",
+					"pathName": "pages/activity/activity",
+					"query": "发现",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/about/about",
+					"pathName": "pages/about/about",
+					"query": "关于我们",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/coupon/coupon",
+					"pathName": "pages/coupon/coupon",
+					"query": "领取优惠券",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/login/login",
+					"pathName": "pages/login/login",
+					"query": "登录页面",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/video/video",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
+}

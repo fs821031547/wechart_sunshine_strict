@@ -1,0 +1,21 @@
+<block wx:for="{{comment}}" wx:for-item="data" wx:key="">
+  <view class='assessli'>
+    <view class='Refine'>
+      <view class='star'>
+      <block wx:for="{{[1,2,3,4,5]}}" wx:key="">
+            <image wx:if="{{index+1>data.star}}" src="/image/star2.png" class='imgw' mode="widthFix" />
+            <image wx:else="" src="/image/star.png" class='imgw' mode="widthFix" />
+          </block>
+      </view>
+      <view class='date'>{{data.createTime}}</view>
+    </view>
+    <view class='label'>
+    <block wx:for="{{data.options}}" wx:for-item="data1" wx:key="">
+      <block wx:for="{{options}}" wx:for-item="item" wx:key="">
+        <text wx:if="{{data1==item.id}}">{{item.optionName}}</text>
+      </block>
+    </block>
+    </view>
+    <view class='con'>{{data.comment}}</view>
+  </view>
+  </block>

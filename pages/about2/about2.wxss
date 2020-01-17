@@ -1,0 +1,19 @@
+.QaImg{margin-bottom: 30rpx;}
+.QaImg image{vertical-align: middle;}
+.QaBox{background-color: #fff;margin:0 30rpx; padding:40rpx; border-radius: 18rpx; margin-bottom:15rpx;}
+.QaBox .titleBox{font-size:34rpx; color: #333;font-weight: 700;position: relative; padding-left: 60rpx;padding-right: 60rpx;}
+.QaBox .titleBox .Qicon{width:35rpx; height: 40rpx;position: absolute;left: 0;top:8rpx;}
+.QaBox .titleBox .shrink{width:32rpx; height: 32rpx;position: absolute;right: 0;top:0rpx;}
+.QaBox .txtleBox{font-size: 26rpx; color: #666;line-height:46rpx;padding-top:20rpx;padding-left: 60rpx;}
+
+.liBox{background-color: #f5f5f5;border-radius:12rpx;position: relative;padding:15rpx 0; padding-left: 120rpx; padding-right: 20rpx; margin-bottom:20rpx;}
+.liBoxno{margin-bottom: 0;}
+.region{background-color: #007eff;border-radius:0 12rpx 12rpx 0;position: absolute; left: 0;top:35rpx;font-size: 32rpx;font-weight: 700;color: #fff; padding:10rpx 15rpx;}
+.itemBox {padding:15rpx 0;}
+.itemBox .tit{font-size: 32rpx;font-weight: 700;color: #000; position: relative; margin-bottom: 10rpx;}
+.itemBox .tit .phone{width:64rpx; height:64rpx; padding: 0; margin: 0; position: absolute;right: 10rpx;top:12rpx;background-color:transparent;}
+.itemBox .tit .phone::after{border: none;}
+.itemBox .tit .square{position: absolute;right: 0;top: 0;color: #007eff;}
+.itemBox .tit .square .sup{vertical-align:super;font-size: 22rpx;}
+.itemBox .txt{font-size: 26rpx;color: #666; padding-left:30rpx;text-indent: -30rpx;}
+.itemBox .txt .imgw{width: 19rpx; height: 27rpx; margin-right: 10rpx;vertical-align: middle;}

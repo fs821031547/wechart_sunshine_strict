@@ -1,0 +1,97 @@
+/* pages/myVideoMessage/myVideoMessage.wxss */
+.contain{
+  background-color: #fff;
+  height: 100%;
+}
+swiper{
+  height: 4800rpx;
+}
+.swiper-tab{
+    width: 100%;
+    text-align: center;
+    height: 50rpx;
+    line-height: 50rpx;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    padding-bottom: 50rpx;
+
+}
+.swiper-tab-item{
+  position:relative;
+  width: 28%; 
+  color:#666;
+  font-size: 32rpx;
+  margin-bottom: -10rpx
+    
+}
+.active{
+  color: #000;
+  font-weight: 600
+}
+.active:before{
+content: "";
+ display: block;
+ position: absolute;
+ bottom: 0;
+ left: 0;
+ width: 36%;
+ height: 10rpx;
+ background: #ffcc00;
+ margin-left: 67rpx;
+}
+
+.show {
+  display: block;
+}
+.hidden{
+  display: none
+}
+.userInfo{
+  display: flex;
+}
+.userName{
+  padding-top: 35rpx;
+}
+.imgWH{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  margin:40rpx 20rpx 10rpx 40rpx; 
+}
+.weui-flex__item {
+  flex: 1;  
+}
+.time{
+    flex: 1; 
+    padding-right: 10rpx; 
+    padding-top: 70rpx;
+    text-align: right
+}
+.publishCommnet{
+  margin: 20rpx 40rpx 40rpx 100rpx;
+  background-color: #f2f2f2;
+  padding:20rpx 25rpx;
+}
+.commentsListCon{
+ margin: 0rpx 40rpx 0rpx 100rpx;
+}
+
+.errPage{
+display: flex;
+justify-content: center;
+align-items: center
+}
+.errImgWH {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 410rpx;
+    height:268rpx;
+    margin: auto;
+}
+.errDesc {
+  color: #000;
+}

@@ -1,0 +1,17 @@
+<view class='attenbg'>
+ <view class='attentit'>关注［阳光学车］公众号</view>
+ <view class='attentxt'><text class='mar fl'></text><text class='mar fr'></text>让我们一起开启学车之旅</view>
+</view>
+<view class='mp30'>
+ <view class='step'>Step.1</view>
+ <view class='attTitle'>在微信首页点击搜索</view>
+ <view class='attImg'><image src="/image/attA.jpg" class='imgw'  mode="widthFix"/></view>
+ <view class='ht50'></view>
+ <view class='step'>Step.2</view>
+ <view class='attTitle'>搜索输入 <text class='point' ontap="copy">{{title}}（点击复制）</text>，点击搜一搜</view>
+ <view class='attImg'><image src="/image/attB.jpg" class='imgw'  mode="widthFix"/></view>
+ <view class='ht50'></view>
+ <view class='step'>Step.3</view>
+ <view class='attTitle'>选择［阳光学车-公众号］愉快的进行学车之旅</view>
+ <view class='attImg'><image src="/image/attC.jpg" class='imgw'  mode="widthFix"/></view>
+</view>

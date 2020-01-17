@@ -1,0 +1,66 @@
+ <view  class=" showGetCoupleModal"  wx:if="{{showfindCoachModal}}" style="width:{{systemWidth}}px;height:{{systemHieght}}px">
+    <view class="getCoupleSuccess " wx:if="{{devtools}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+      <view class="coupleDesc">
+  <view class="form-title1">
+         <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+       </view>
+      <view class="form-title2">
+        <text class="fontSize-26">填写信息，静等客服联系!</text>
+       </view>
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input userName" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input userTel" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{isIos}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+      <view class="coupleDesc">
+  <view class=" form-title1">
+         <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+       </view>
+      <view class=" form-title2">
+        <text class="fontSize-26">填写信息，静等客服联系!</text>
+       </view>
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{isAndroid}}" style="top:{{(systemHieght-344)/2}}px;left:{{(systemWidth-290)/2}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+        <view class="coupleDesc">
+       <view class=" form-title1">
+         <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+       </view>
+      <view class=" form-title2">
+        <text class="fontSize-26">填写信息，静等客服联系!</text>
+       </view>
+    
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>

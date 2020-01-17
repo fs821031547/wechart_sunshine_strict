@@ -1,0 +1,54 @@
+/* pages/login/login.wxss */
+@import "../person/person.wxss";
+.login {
+  background-color: #fff;
+  padding: 50rpx 30rpx;
+ 
+}
+.userInfoBtn {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.getUserInfoBtn {
+  width: 340rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  margin-bottom: 20rpx;
+  border: none;
+}
+.agreeLogin .getUserInfoBtn{
+  background-color: #c8161d;
+  color: #fff;
+}
+.disAgreeLogin .getUserInfoBtn{
+  background-color: #fff;
+  color: #666;
+}
+.userApply {display: flex;align-items: center;color: #000}
+.loginLogo {
+  padding-top: 10rpx;
+}
+.loginLogo image{
+  width: 48rpx;
+  height: 48rpx;
+  border-radius:30rpx; 
+  margin-right: 15rpx;
+}
+.infoTitle {
+  font-size: 40rpx;
+  color: #000;
+  margin-top:30rpx;
+  margin-bottom:60rpx;
+}
+.infoContain {
+   color: #000;
+   display: flex;
+   text-align: center;
+   align-items: center
+}
+
+.btn {
+  margin-top: 440rpx;
+}
+.texst{font-size: 28rpx;}

@@ -1,0 +1,406 @@
+<view class="intro">组件</view>
+<view class='ht145'></view>
+<view class='topFixed'>
+  <view class="header-box" style="height: {{navH}}rpx;">
+    <view class="city-box" style="height: {{navH}}rpx;line-height:{{navH}}rpx;margin-top:{{navTop}}rpx" bindtap='goCity'>
+      <text class="currentCity" decode="{{true}}">&nbsp;{{city}}&nbsp;</text>
+      <image class="search-dows" src="/image/dows.png" />
+    </view>
+    <view class="headerTitle" style="margin-top:{{navTitleTop}}rpx;">
+      阳光学车
+    </view>
+  </view>
+</view>
+<scroll-view scroll-y scroll-top='{{topNum}}' bindscroll="scroll" bindscrolltolower="addCoachListData" style="position:absolute; top:0; left:0; right:0; bottom:0;height:{{systemHieght}}">
+  <view class='contain'>
+    <view class='par30'>
+      <view wx:if="{{activity != null && activity.length>0}}" class="page-section page-section-spacing swiper">
+        <view class="rock-blank-20" style="height:{{headerBlank}}rpx"></view>
+        <swiper indicator-dots="{{activity != null && activity.length>1}}" autoplay="{{true}}" class="topSwiper" interval="{{3000}}" duration="500" indicator-active-color="#e62424">
+          <block wx:for="{{showCaseListTab}}" wx:for-item="data" wx:key="">
+            <swiper-item>
+              <view class="swiper-item">
+                <image src="{{data.photoUrl}}" class='imgw' data-index="{{index}}" data-couponId="{{data.couponId}}" ontap="clickActivity" />
+              </view>
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <!-- <block>
+        <view class="getCouple" bindtap="getCoupleFirst">
+          <view class="userImg" style="margin-right:0rpx;">
+            <image wx:if="{{token}}" src="{{photo}}" class='userImg'></image>
+            <image wx:else src="/image/boy.png" class='userImg'></image>
+          </view>
+          <view class='getCouplePeo padding-tb-20'>
+            <text class='fontSize-36' wx:if="{{token}}">{{name}}，您好</text>
+            <text class='fontSize-36' wx:else>游客，您好</text>
+            <text class='fontSize-28 padding-t-10 text-overflow-1'>您有一张学车代金券待领取</text>
+          </view>
+          <view class="getBtn">
+            <image src="/image/getCouple.png" class="getCoupleImg"></image>
+          </view>
+        </view>
+      </block> -->
+      <!-- <block>
+        <view class="hotSel margin-tb-20">
+          <view class="margin-t-40 index-title-box margin-bt-30">
+            <text class="fontWeight fontSize-36">热门活动</text>
+            <image class="more-icon" src="http://img.91ygxc.com/filestore1/M00/32/EC/rBLZzl2j2QOAU4OzAAAA6-paYc8212.png"></image>
+            <view class="f-right">
+              <text class="fontSize-24 more" bindtap="hotSelMore">更多
+              </text>
+            </view>
+          </view>
+          <view class="showCaseList">
+            <block wx:for="{{showCaseList}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+              <view class="activeImg" wx:if="{{index<2}}">
+                <image src="{{item.photoUrl}}" data-index="{{index}}" data-id="{{item.id}}" data-couponId="{{item.couponId}}" ontap="clickHotActive"></image>
+              </view>
+            </block>
+          </view>
+        </view>
+      </block> -->
+      <block>
+        <view style="width:100%;height: auto" scroll-y="true">
+          <view class="searchCoach margin-t-40" wx:if="{{showCoach}}">
+            <view class="index-title-box">
+              <text class="fontWeight fontSize-36">严选教练</text>
+            </view>
+            <!-- 搜索定位 -->
+            <view class="{{searchCoachList}}">
+              <view class="searchCoachBox margin-t-30">
+                <view class="search-box" bindtap='goSearch'>
+                  <input class="search-input" disabled='true' type="text" value="搜索教练/驾校" placeholder="搜索教练/驾校" placeholder-class="input-placeholder" bindinput="search" />
+                  <image class="search-icon" src="http://img.91ygxc.com/filestore1/M00/32/EA/rBLZzl2j1duAFbP2AAACbXNo5ug758.png" />
+                </view>
+                <view class='floatTab'>
+                  <view class='tabtxt'>
+                    <view class='com-selectBox'>
+                      <view class='com-sContent' bindtap='selectToggle' data-index="0">
+                        <view class='com-sTxt'>{{selectSortName}}</view>
+                        <image src='../../image/up2.png' class='com-sImg' animation="{{animationData[0]}}"></image>
+                      </view>
+                    </view>
+                  </view>
+                  <view class='tabtxt tabtxtSec'>
+                    <view class='com-selectBox'>
+                      <view class='com-sContent' bindtap='selectToggle' data-index="1">
+                        <view class='com-sTxt'>{{selectCarName}}</view>
+                        <image src='../../image/up2.png' class='com-sImg' animation="{{animationData[1]}}"></image>
+                      </view>
+                    </view>
+                  </view>
+                  <view class='com-sList' wx:if="{{isShow}}">
+                    <view wx:for="{{selectArray[currentIndex]}}" wx:for-item="data" wx:key="" data-id="{{data.id}}" data-text="{{data.text}}" class='com-sItem' bindtap='clickSelect'>{{data.text}}</view>
+                  </view>
+                </view>
+              </view>
+              <!-- 暂时先不使用通过标签来搜索 -->
+              <!-- <view class="caochLableList padding-b-20 {{arrowDownStatus==true ? 'active':''}}">
+                <view class="caochLableList-item {{item.activeStatus==true?'active':''}}" wx:for="{{coachTag}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+                  <view ontap="getTagid" data-id="{{item.id}}">{{item.name}}</view>
+                </view>
+              </view> -->
+              <!-- <view class="arrow-down" bindtap='arrowDown'>
+                <image wx:if="{{!arrowDownStatus}}" class="" src="http://img.91ygxc.com/filestore1/M00/32/FE/rBLZzl2kC4-AbOgOAAAFZyM7bxU985.png"> </image>
+                <image wx:if="{{arrowDownStatus}}" class="" src="http://img.91ygxc.com/filestore1/M00/32/FE/rBLZzl2kCzaAGvj4AAAFZ9D9V98738.png"> </image>
+              </view> -->
+            </view>
+          </view>
+        </view>
+      </block>
+
+      <block wx:for="{{coachlist}}" wx:for-index="index" wx:key="key" wx:for-item="item" wx:if="{{index < rowCount}}">
+        <view class='coachPerInfoList' bindtap="goDetail" data-id="{{item.id}}">
+          <view class="coachPerInfo">
+            <view class="avatar">
+              <image src="{{item.headImg}}" class='userImg'></image>
+            </view>
+            <!-- <view class="impression-item" wx:for="{{item.tagList}}" wx:for-index="index" wx:for-item="tagList" wx:key="key">
+              <view class="goldCaoch" wx:if="{{tagList.type==1}}">
+                <button size="mini"> </button>
+              </view>
+            </view> -->
+            <view class="conmal">
+               <view class="titlea">
+                   <text class="coachName">{{item.name}}</text>
+                   <text class="fontSzie-24  driverSchool">{{item.insName}}</text>
+               </view>
+               <view class="titleb">
+                   <text class="coachAge detailInfoCon">{{item.driving}}年教龄</text>
+                   <text class="carType detailInfoCon">{{item.teachPermitted}}班</text>
+                   <text class="distants detailInfoCon">距离{{item.distance}}km</text>
+               </view>
+               <view class="titlec">
+                <image src="/image/pos.jpg" class="imgd"></image>
+                 <text class="textd">{{item.address}}</text>
+               </view>
+               <view class="tool">
+              <button size="mini" class="findCoachLearnCar" catchtap="findCoachLearnCar" data-id="{{item.id}}">找ta学车</button>
+               <block wx:for="{{item.coupons}}" wx:for-index="index" wx:for-item="coupons" wx:key="key">
+                <button size="mini" type='warn' catchtap="getCouple" data-id="{{item.id}}" wx:if="{{index===item.coupons.length-1}}" class="fontSize-24" data-item="{{item}}">领优惠券</button>
+              </block>
+            </view>
+
+            </view>
+            
+          </view>
+          <!-- <view class="detailInfo">
+            <text class="remark fontSize-28 detailInfoTitle">评分</text>
+            <text class="carType fontSize-28 detailInfoTitle">车型</text>
+            <text class="coachAge fontSize-28 detailInfoTitle">教龄</text>
+            <text class="distants fontSize-28 detailInfoTitle">距离</text>
+          </view> -->
+          <!-- <view class="coachImgList">
+            <view class="coachImgList-item" wx:for="{{item.imgs}}" wx:for-index="index" wx:for-item="imgs" wx:key="key">
+              <block wx:if="{{index<3}}" class="{{index}}">
+                <view class="coachImg {{index==2?'moreImg':''}}" wx:if="{{showMoreImg}}">
+                  <image mode="aspectFill" src="{{imgs.imgUrl}}"></image>
+                </view>
+              </block>
+            </view>
+            <view>
+              <text class="lookMore" catchtap="moreImg" wx:if="{{showMorePhModal}}" data-id="{{item.id}}" data-imgsList="{{item.imgs}}">更多照片 </text>
+            </view>
+          </view> -->
+          <!-- <view class="studentImpression">
+            <view class="studentImpression-text">
+              学员印象
+            </view>
+            <view class="impression-item" wx:for="{{item.tagList}}" wx:for-index="index" wx:for-item="tagList" wx:key="key">
+              <text wx:if="{{tagList.type!=1}}" class="{{tagList.bgColor}} {{tagList.textColor}}">{{tagList.name}}</text>
+            </view>
+          </view> -->
+        </view>
+      </block>
+      <view class="noMore">
+        <text>没有更多了</text>
+      </view>
+    </view>
+    <!-- <view>
+      <view wx:if="{{showModal}}" class="showModal">
+        <image bindtap="closePreview" class="close" src="/image/close.png"></image>
+        <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots="{{true}}" current="{{current}}" style="height:400rpx">
+          <block wx:for="{{moreimgList}}" wx:for-index="index" wx:key="key" wx:for-item="imgs">
+            <swiper-item>
+              <image src="{{imgs.imgUrl}}" class="slide-image" width="355" height="250" />
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+    </view> -->
+    <view class='CustomerService' hidden="{{hideGoTop}}">
+      <image class="goTop" src="/image/goTop.png" bindtap="goTop"></image>
+    </view>
+  </view>
+</scroll-view>
+<block>
+  <view wx:if="{{showGetCoupleModal}}" class="showGetCoupleModal" style="width:{{systemWidth}}px;height:{{systemHieght}}px">
+    <view class="getCoupleSuccess">
+      <image src="/image/getCoupleSuccess.png"></image>
+      <view class="form">
+        <form bindsubmit="formSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindKeyNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindKeyMobInput" />
+          <button class="submit" formType="submit">提交</button>
+          <view class="formClose" bindtap="formClose">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</block>
+<!-- 热门精选 -->
+<view wx:if="{{getHotActiveModal}}">
+  <coach-dialog bindconfirm="formSubmit" bindclose="closeCoachDialog"></coach-dialog>
+</view>
+<!-- <block>
+  <view wx:if="{{getHotActiveModal}}" class="showGetCoupleModal" style="width:{{systemWidth}}px;height:{{systemHieght}}px">
+    <view class="getCoupleSuccess" wx:if="{{devtools}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/getPlatCouple.png"></image>
+      <view class="form">
+        <form bindsubmit="formSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindKeyNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindKeyMobInput" />
+          <button class="submit" formType="submit">提交</button>
+          <view class="formClose" bindtap="formClose">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</block> -->
+<!-- 找ta学车-->
+<!-- signdialog -->
+<block>
+  <view class=" showGetCoupleModal" wx:if="{{showfindCoachModal}}" style="width:{{systemWidth}}px;height:{{systemHieght}}px">
+    <view class="getCoupleSuccess " wx:if="{{devtools}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+      <view class="coupleDesc">
+        <view class="form-title1">
+          <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+        </view>
+        <view class="form-title2">
+          <text class="fontSize-26">填写信息，静等客服联系!</text>
+        </view>
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input userName" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input userTel" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose signLearn" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{isIos}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+      <view class="coupleDesc">
+        <view class=" form-title1">
+          <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+        </view>
+        <view class=" form-title2">
+          <text class="fontSize-26">填写信息，静等客服联系!</text>
+        </view>
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose signLearn" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{isAndroid}}" style="top:{{(systemHieght-344)/2}}px;left:{{(systemWidth-290)/2+10}}px">
+      <image src="/image/findCoachLearnCar.png"></image>
+      <view class="coupleDesc">
+        <view class=" form-title1">
+          <text class="fontSize-26">为您严选教练，学车报名不将就</text>
+        </view>
+        <view class=" form-title2">
+          <text class="fontSize-26">填写信息，静等客服联系!</text>
+        </view>
+
+      </view>
+      <view class="form signLearnCar">
+        <form bindsubmit="formfindCoachSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameInput" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobInput" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose signLearn" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view>
+</block>
+<block>
+  <!-- 领取领券 -->
+  <view wx:if="{{getCoupleModal}}" class="showGetCoupleModal" style="width:{{systemWidth}}px;height:{{systemHieght}}px">
+     <view wx:if="{{devtools}}" class="getCoupleSuccess" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+      <view class="singleCoachDesc">
+        <text class="fontSize-28" style="color:#000">填写信息，立即领取学车专属优惠券！</text>
+      </view>
+      <view class="form">
+        <form bindsubmit="formGetCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess" wx:if="{{isIos}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+         <view class="singleCoachDesc">
+        <text class="fontSize-28" style="color:#000">填写信息，立即领该教练专属优惠券！</text>
+      </view>
+      <view class="form getCoupleBox">
+        <form bindsubmit="formGetCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess" wx:if="{{isAndroid}}" style="top:{{(systemHieght-344)/2}}px;left:{{(systemWidth-290)/2}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+         <view class="singleCoachDesc">
+        <text class="fontSize-28" style="color:#000">填写信息，立即领取学车专属优惠券！</text>
+      </view>
+      <view class="form getCoupleBox">
+        <form bindsubmit="formGetCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">立即提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+ 
+  </view>
+</block>
+
+<block>
+<view wx:if="{{getFirstCoupleModal}}">
+  <greet-dialog bindconfirm="formGetBannerCoupleSubmit" bindclose="closeCoachDialog"></greet-dialog>
+</view>
+  <!-- <view wx:if="{{getFirstCoupleModal}}" class=" showGetCoupleModal" style="width:{{systemWidth}}px;height:{{systemHieght}}px;">
+    <view class="getCoupleSuccess " wx:if="{{isIos}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+      <view class="form">
+        <form bindsubmit="formGetBannerCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{isAndroid}}" style="top:{{(systemHieght-344)/2}}px;left:{{(systemWidth-290)/2+0}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+      <view class="form">
+        <form bindsubmit="formGetBannerCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+    <view class="getCoupleSuccess " wx:if="{{devtools}}" style="top:{{(systemHieght-344)/2-46}}px;left:{{(systemWidth-290)/2-16}}px">
+      <image src="/image/getCoupleSuccess.png"></image>
+      <view class="form">
+        <form bindsubmit="formGetBannerCoupleSubmit" bindreset="formClose">
+          <input class="weui-input" placeholder-class="place-holder" placeholder="请输入您的姓名" bindinput="bindNameGetCou" />
+          <input class="weui-input" placeholder-class="place-holder" maxlength="11" placeholder="请输入您的手机号" bindinput="bindMobGetCou" />
+          <button class="submit" formType="submit">提交</button>
+          <view class="formClose" bindtap="formCloseCar">
+            <image src="/image/circle-close.png" style="left:156rpx;"></image>
+          </view>
+        </form>
+      </view>
+    </view>
+  </view> -->
+</block>

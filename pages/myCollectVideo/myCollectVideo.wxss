@@ -1,0 +1,444 @@
+/* .contain {
+  background-color: #fff;
+  height: 100%;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding-bottom: 50rpx;
+}
+
+.swiper-tab-item {
+  position: relative;
+  width: 20%;
+  color: #666;
+  font-size: 32rpx;
+  margin-bottom: -10rpx;
+}
+
+.active {
+  color: black;
+  font-weight: 600;
+}
+
+.active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  height: 10rpx;
+  background: #fc0;
+  margin-left: 39rpx;
+}
+
+swiper {
+  text-align: center;
+}
+
+.latestVideoCon {
+  width: 100%;
+}
+
+.latestVideoLeft {
+  width: 352rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.latestVideoRight {
+  float: right;
+  width: 352rpx;
+  margin-right: 20rpx;
+}
+
+.myVideo {
+  width: 100%;
+}
+
+.videoplay_btn {
+  position: relative;
+}
+
+.play {
+  position: absolute;
+  left: 34%;
+  width: 92rpx;
+  height: 92rpx;
+}
+
+.dec {
+  color: #222;
+  padding: 0rpx 10rpx 10rpx;
+}
+
+.activeBox {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.activeBox .watchCount {
+  position: absolute;
+  bottom: 18rpx;
+  left: 20rpx;
+  text-shadow: 0 0 10rpx #999;
+}
+
+.activeBox  .heartCount {
+  position: absolute;
+  bottom: 18rpx;
+  right: 20rpx;
+  text-shadow: 0 0 10rpx #999;
+}
+
+.heartCount image {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 10rpx;
+}
+
+.descOverFlow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 24rpx;
+} */
+.contain {
+  background-color: #fff;
+  height: 100%;
+  padding: 0rpx 20rpx;
+}
+
+swiper {
+  height: 6800rpx;
+}
+
+.swiper-tab {
+  width: 100%;
+  text-align: center;
+  height: 50rpx;
+  line-height: 50rpx;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  padding: 40rpx 0rpx 50rpx;
+
+}
+.swiper-tab-item {
+  position: relative;
+  width: 22%;
+  color: #666;
+  font-size: 32rpx;
+  margin-bottom: -10rpx;
+}
+
+.active {
+  color: black;
+  font-weight: 600;
+}
+
+.active:before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 40%;
+  height: 10rpx;
+  background: #fc0;
+  margin-left:46rpx;
+}
+
+swiper {
+  text-align: center;
+}
+
+.free-WaterfallFlow {
+  width: 94%;
+  display: flex;
+}
+
+.free-WaterfallFlow .flex-wrap {
+  flex: 1;
+  background-color: red;
+  height: 300rpx;
+}
+
+.activity_recommend {
+  margin-top: 10px;
+  padding-top: 5px;
+  margin-left: 25rpx;
+  margin-right: 25rpx;
+  position: relative;
+}
+
+.recommend_content {
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  height: 300rpx;
+  flex: 1;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  /* background-color: rebeccapurple */
+}
+
+.hostVideoCon {
+  width: 100%;
+}
+
+.latestVideoCon {
+  width: 100%;
+}
+
+.latestVideoLeft, .hostVideoLeft {
+  width: 352rpx;
+  float: left;
+  margin-left: 20rpx;
+}
+
+.latestVideoRight, .hostVideoRight {
+  float: right;
+  width: 352rpx;
+  margin-right: 20rpx;
+}
+
+.myVideo {
+  width: 100%;
+}
+
+.showVideo {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  background-color: black;
+  z-index: 2;
+  top: 0;
+  left: 0;
+}
+
+/* 视频详情 */
+
+.comment image {
+  transform: scale(0.85);
+}
+
+.mainVideo {
+  position: relative;
+  z-index: 10;
+}
+
+.iconContant {
+  position: absolute;
+  z-index: 100;
+  right: 10px;
+  bottom: 30px;
+}
+
+.iconContant image {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin-left: 4px;
+}
+
+.iconContant-item {
+  display: block;
+}
+
+.iconContant-item text {
+  display: block;
+  color: #fff;
+}
+
+.videoplay_btn {
+  position: relative;
+}
+
+.play {
+  position: absolute;
+  left: 34%;
+  width: 92rpx;
+  height: 92rpx;
+}
+
+.descOverFlow {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-size: 24rpx;
+  word-wrap: break-word;
+}
+.dec {
+  color: #222;
+  padding: 0px 20rpx 0rpx;
+  text-align: left;
+}
+
+.activeBox {
+  font-size: 20rpx;
+  color: #fff;
+}
+
+.activeBox .watchCount {
+  position: absolute;
+  bottom: 18rpx;
+  left: 20rpx;
+  text-shadow: 0 0 10rpx #999;
+}
+
+.activeBox  .heartCount {
+  position: absolute;
+  bottom: 18rpx;
+  right: 20rpx;
+  text-shadow: 0 0 10rpx #999;
+}
+
+.heartCount image {
+  width: 22rpx;
+  height: 22rpx;
+  margin-right: 4rpx;
+}
+.videoCon{
+  clear:both;
+  overflow: hidden;
+  width:100%;
+}
+
+.videoCon .left,.videoCon .right{
+  width:350rpx;
+}
+
+.videoCon .left{
+  float:left;
+}
+
+.videoCon .right{
+  float:right;
+}
+
+.latestVideoLeftitem{
+  display: inline-block;
+  background:#fff;
+  width:100%;
+  margin-bottom: 16rpx;
+}
+.item-img{
+  width:100%;
+}
+
+.item-title{
+  padding:10px;
+  font-size: 14px;
+  font-family: 'PingFang SC-Medium';
+  color: #1e1e1e;
+}
+
+.item-ava{
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+
+  float:left;
+
+
+}
+
+.history_auth_name{
+
+  padding:0 0 10px 10px;
+
+}
+
+.name-title{
+
+  font-size:12px;
+
+  font-family: 'PingFang SC-Medium';
+
+  color: #1e1e1e;
+  display: block;
+
+}
+
+
+.history_content{
+  clear:both;
+  overflow: hidden;
+  width:100%;
+}
+
+.latestVideoCon .left,.latestVideoCon .right{
+
+  width:48%;
+
+}
+
+.latestVideoCon .left{
+
+  float:left;
+  padding-left: 16rpx;
+
+}
+
+.latestVideoCon .right{
+  float:right;
+  padding-right: 16rpx;
+
+}
+
+.videoplay_btn{
+  display: inline-block;
+  background:#fff;
+  border-radius: 10px;
+  width:100%;
+}
+
+.dec{
+
+  padding:0 0 10px 10px;
+
+}
+
+.name-title{
+
+  font-size:12px;
+
+  font-family: 'PingFang SC-Medium';
+
+  color: #1e1e1e;
+
+  display: block;
+
+}
+
+.errPage{
+display: flex;
+justify-content: center;
+align-items: center
+}
+.imgWH {
+  position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 410rpx;
+    height:268rpx;
+    margin: auto;
+}
+.errDesc {
+  color: #000;
+}

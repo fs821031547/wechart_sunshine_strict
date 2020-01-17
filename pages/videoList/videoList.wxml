@@ -1,0 +1,320 @@
+<view>
+  <swiper vertical="{{true}}" circular="{{true}}" current="{{current}}" skip-hidden-item-layout="{{true}}" bindchange="changeCurrent" bindanimationfinish="changeItem">
+    <swiper-item item-id="{{oneItemParam.id}}">
+      <video   id="myVideo0" src="{{oneItemParam.cloudUrl}}" poster="{{oneItemParam.coverImageUrl}}" custom-cache="{{false}}" controls="{{true}}" bindplay="eventPlay"  bindtap="tabVideo" object-fit="fill" show-fullscreen-btn="{{false}}" play-btn-position="center"></video>
+      <!-- bindpause="eventPause" -->
+      <view class="videoAction-absolute-box" wx:if="{{!token}}">
+        <view class="videoAction-absolute">
+          <view class="videoEveryAction heartCount">
+            <image ontap="addHeartCount" class="imgWH" src="/image/heartCount-red.png" wx:if="{{oneItemParam.hasHeart}}"></image>
+            <image wx:else ontap="addHeartCount" class="imgWH" src="/image/heartCount.png"></image>
+            <view class="count">{{oneItemParam.heartCount}}</view>
+          </view>
+          <view class="videoEveryAction collection">
+            <image ontap="addCollect" class="imgWH" src="/image/collect-red.png" wx:if="{{hasCollection[videoId]}}"></image>
+            <image wx:else ontap="addCollect" class="imgWH" src="/image/collect.png"></image>
+            <view class="count">{{oneItemParam.collectionCount}}</view>
+          </view>
+          <view class="videoEveryAction message">
+            <image class="imgWH" src="/image/message.png" bindtap="setModalStatus" data-status="1"></image>
+            <view class="count">{{oneItemParam.evalCount}}</view>
+            <!-- <view class="count" data-item="{{hasHeartStr}}" data-id="{{videoId}}">{{hasHeartStr}}</view> -->
+          </view>
+          <view>
+            <block wx:if="{{token}}">
+              <button open-type="share" class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;"></image>
+                <view class="count shareText">分享</view>
+              </button>
+            </block>
+            <block wx:else>
+              <button class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}" bindtap="goToLogin">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;" bindtap="goToLogin"></image>
+                <view class="count shareText" bindtap="goToLogin">分享</view>
+              </button>
+            </block>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item item-id="{{twoItemParam.id}}">
+      <video  id="myVideo1" src="{{twoItemParam.cloudUrl}}" poster="{{twoItemParam.coverImageUrl}}" custom-cache="{{false}}" bindplay="eventPlay" bindtap="tabVideo" object-fit="fill" controls="{{true}}" show-fullscreen-btn="{{false}}" play-btn-position="center"></video>
+       <!--  bindpause="eventPause"  -->
+      <view class="videoAction-absolute-box" wx:if="{{!token}}">
+        <view class="videoAction-absolute">
+          <view class="videoEveryAction heartCount">
+            <image ontap="addHeartCount" class="imgWH" src="/image/heartCount-red.png" wx:if="{{twoItemParam.hasHeart}}"></image>
+            <image wx:else ontap="addHeartCount" class="imgWH" src="/image/heartCount.png"></image>
+            <view class="count">{{twoItemParam.heartCount}}</view>
+          </view>
+          <view class="videoEveryAction collection">
+            <image ontap="addCollect" class="imgWH" src="/image/collect-red.png" wx:if="{{twoItemParam.hasCollection}}"></image>
+            <image wx:else ontap="addCollect" class="imgWH" src="/image/collect.png"></image>
+            <view class="count">{{twoItemParam.collectionCount}}</view>
+          </view>
+          <view class="videoEveryAction message">
+            <image class="imgWH" src="/image/message.png" bindtap="setModalStatus" data-status="1"></image>
+            <view class="count">{{twoItemParam.evalCount}}</view>
+            <!-- <view class="count" data-item="{{hasHeartStr}}" data-id="{{videoId}}">{{hasHeartStr}}</view> -->
+          </view>
+          <view>
+            <block wx:if="{{token}}">
+              <button open-type="share" class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;"></image>
+                <view class="count shareText">分享</view>
+              </button>
+            </block>
+            <block wx:else>
+              <button class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}" bindtap="goToLogin">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;" bindtap="goToLogin"></image>
+                <view class="count shareText" bindtap="goToLogin">分享</view>
+              </button>
+            </block>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+    <swiper-item item-id="{{threeItemParam.id}}">
+      <video  id="myVideo2" src="{{threeItemParam.cloudUrl}}" poster="{{threeItemParam.coverImageUrl}}" custom-cache="{{false}}" controls="{{true}}"   bindtap="tabVideo" object-fit="fill" show-fullscreen-btn="{{false}}"
+        play-btn-position="center"></video>
+        <!-- autoplay="{{true}}" bindpause="eventPause" -->
+      <view class="videoAction-absolute-box" wx:if="{{!token}}">
+        <view class="videoAction-absolute">
+          <view class="videoEveryAction heartCount">
+            <image ontap="addHeartCount" class="imgWH" src="/image/heartCount-red.png" wx:if="{{threeItemParam.hasHeart}}"></image>
+            <image wx:else ontap="addHeartCount" class="imgWH" src="/image/heartCount.png"></image>
+            <view class="count">{{threeItemParam.heartCount}}</view>
+          </view>
+          <view class="videoEveryAction collection">
+            <image ontap="addCollect" class="imgWH" src="/image/collect-red.png" wx:if="{{threeItemParam.hasCollection}}"></image>
+            <image wx:else ontap="addCollect" class="imgWH" src="/image/collect.png"></image>
+            <view class="count">{{threeItemParam.collectionCount}}</view>
+          </view>
+          <view class="videoEveryAction message">
+            <image class="imgWH" src="/image/message.png" bindtap="setModalStatus" data-status="1"></image>
+            <view class="count">{{threeItemParam.evalCount}}</view>
+            <!-- <view class="count" data-item="{{hasHeartStr}}" data-id="{{videoId}}">{{hasHeartStr}}</view> -->
+          </view>
+          <view>
+            <block wx:if="{{token}}">
+              <button open-type="share" class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;"></image>
+                <view class="count shareText">分享</view>
+              </button>
+            </block>
+            <block wx:else>
+              <button class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}" bindtap="goToLogin">
+                <image src="/image/relay.png" style="width:60rpx;height:60rpx;" bindtap="goToLogin"></image>
+                <view class="count shareText" bindtap="goToLogin">分享</view>
+              </button>
+            </block>
+          </view>
+        </view>
+      </view>
+    </swiper-item>
+  </swiper>
+  <view class="videoAction" wx:if="{{token}}">
+    <view class="videoEveryAction heartCount">
+      <image ontap="addHeartCount" class="imgWH" src="/image/heartCount-red.png" wx:if="{{hasHeart[videoId]}}"></image>
+      <image wx:else ontap="addHeartCount" class="imgWH" src="/image/heartCount.png"></image>
+      <view class="count">{{heartCount[videoId]}}</view>
+    </view>
+    <view class="videoEveryAction collection">
+      <image ontap="addCollect" class="imgWH" src="/image/collect-red.png" wx:if="{{hasCollection[videoId]}}"></image>
+      <image wx:else ontap="addCollect" class="imgWH" src="/image/collect.png"></image>
+      <view class="count">{{collectionCount[videoId]}}</view>
+    </view>
+    <view class="videoEveryAction message">
+      <image class="imgWH" src="/image/message.png" bindtap="setModalStatus" data-status="1"></image>
+      <view class="count">{{evalCount[videoId]}}</view>
+    </view>
+    <view>
+      <block wx:if="{{token}}">
+        <button open-type="share" class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}">
+          <image src="/image/relay.png" style="width:60rpx;height:60rpx;"></image>
+          <view class="count shareText">分享</view>
+        </button>
+      </block>
+      <block wx:else>
+        <button class="count shareButton" data-id="{{videoId}}" data-coverImageUrl="{{coverImageUrl}}" data-desc="{{desc}}" bindtap="goToLogin">
+          <image src="/image/relay.png" style="width:60rpx;height:60rpx;" bindtap="goToLogin"></image>
+          <view class="count shareText" bindtap="goToLogin">分享</view>
+        </button>
+      </block>
+    </view>
+  </view>
+  <view class="desc" wx:if="{{showDesc}}">
+    <text wx:if="{{desc[videoId]==null}}" class="fontSize-28" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这段视频真搞笑</text>
+    <text class="fontSize-28" wx:else class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{desc[videoId]}}</text>
+  </view>
+
+  <!-- <view class="dec">
+                    <text class="fontSize-24" wx:if="{{item.desc==null}}" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>这个视频真搞笑</text>
+                    <text wx:else class="fontSize-24" class='descOverFlow{{item.desc.length>22 ? " descOverFlowActive" : ""}}'>{{item.desc}}</text>
+                  </view> -->
+
+</view>
+<view class="drawer_screen" wx:if="{{showModalStatus}}">
+  <view animation="{{animationData}}" class="drawer_attr_box" wx:if="{{showModalStatus}}">
+    <view class="drawer_attr_content">
+      <view class="commentTitle" id="dHead">
+        <!-- <text class="text-align:center" wx:if="{{evalCount[videoId]==0}}">评论(0)</text> -->
+        <text class="text-align:center">评论({{rowCount}})</text>
+        <view class="close_icon" bindtap="setModalStatus" data-status="0">×</view>
+      </view>
+      <view id="dBody">
+        <view class="hotCommentTitle">
+          <text class="fontSize-24">热门评论</text>
+        </view>
+        <view class="no-comment" wx:if="{{hotCommentsList.length==0}}">
+          暂无热门评论
+        </view>
+        <!-- 热门评论 -->
+        <view class="usersComment" wx:for="{{hotCommentsList}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+          <view class="userInfoTitle margin-b-30">
+            <view class="userInfo">
+              <image class="userImg" wx:if="{{item.fromUserPhoto==null}}" src="/image/boy.png"></image>
+              <image wx:else class="userImg" src="{{item.fromUserPhoto}}"></image>
+              <view>
+                <view class="userName">
+                  <text>{{item.fromUserName}}</text>
+                </view>
+                <view class="date">
+                  <text>{{item.submitTime}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="videoInfo">
+              <view style="display: flex" data-item="{{item}}" bindtap="setEvalHeart">
+                <image class="VideoImgWH" src="/image/message.png" data-status="1" style="margin-right:10rpx"></image>
+                <text class="fontSize-24">评论</text>
+              </view>
+              <view style="display: flex" data-item="{{item}}" bindtap="setHeart">
+                <image wx:if="{{item.hasHeart}}" class="VideoImgWH testHeart" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount-red.png"></image>
+                <image wx:else class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount.png"></image>
+                <view class="count">{{item.heartCount}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="commentCon margin-b-30">
+            <text class="fontSize-24">{{item.content}}</text>
+          </view>
+
+          <!-- 子评论 -->
+          <!--  -->
+          <view class="applyComment" wx:for="{{item.childs}}" wx:for-index="cindex" wx:key="ckey" wx:for-item="citem">
+            <view class="userInfoTitle margin-b-30">
+              <view class="userInfo">
+                <image wx:if="{{citem.fromUserPhoto==null}}" class="userImg" src="/image/boy.png" style="width:60rpx;height:60rpx;border-radius: 30rpx"></image>
+                <image wx:else src="{{citem.fromUserPhoto}}"></image>
+                <!-- <image src="/image/boy.png"></image> -->
+                <view>
+                  <view class="userName">
+                    <text>{{citem.fromUserName}}</text>
+                  </view>
+                  <view class="date">
+                    <text>{{citem.submitTime}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class="videoInfo">
+                <view style="display: flex" data-item="{{citem}}" bindtap="setEvalHeart">
+                  <!-- data-item="{{citem}}" bindtap="setEvalHeart" -->
+                  <image class="VideoImgWH" src="/image/message.png" data-status="1" style="margin-right:10rpx"></image>
+                  <text class="fontSize-24">评论</text>
+                </view>
+                <view style="display: flex" data-item="{{citem}}" bindtap="setHeart">
+                  <image wx:if="{{citem.hasHeart}}" class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount-red.png"></image>
+                  <image wx:else class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount.png"></image>
+                  <view class="count">{{citem.heartCount}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="commentCon margin-b-30">
+              <text class="fontSize-24">{{citem.content}}</text>
+            </view>
+          </view>
+        </view>
+        <view class="hotCommentTitle">
+          <text class="fontSize-24">最新评论</text>
+        </view>
+        <view class="no-comment" wx:if="{{commentsList.length==0}}">
+          发个评论再走吧！
+        </view>
+        <!-- 最新评论 -->
+        <view class="usersComment" wx:for="{{commentsList}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+          <view class="userInfoTitle margin-b-30">
+            <view class="userInfo">
+              <image class="userImg" wx:if="{{item.fromUserPhoto==null}}" src="/image/boy.png"></image>
+              <image class="userImg" wx:else src="{{item.fromUserPhoto}}"></image>
+              <view>
+                <view class="userName">
+                  <text>{{item.fromUserName}}</text>
+                </view>
+                <view class="date">
+                  <text>{{item.submitTime}}</text>
+                </view>
+              </view>
+            </view>
+            <view class="videoInfo">
+              <view style="display: flex" data-item="{{item}}" bindtap="setEvalHeart">
+                <image class="VideoImgWH" src="/image/message.png" data-status="1" style="margin-right:10rpx"></image>
+                <text class="fontSize-24">评论</text>
+              </view>
+              <view style="display: flex" data-item="{{item}}" bindtap="setHeart">
+                <image wx:if="{{item.hasHeart}}" class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount-red.png"></image>
+                <image wx:else class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount.png"></image>
+                <view class="count">{{item.heartCount}}</view>
+              </view>
+            </view>
+          </view>
+          <view class="commentCon margin-b-30">
+            <text class="fontSize-24">{{item.content}}</text>
+          </view>
+
+          <view class="applyComment" wx:for="{{item.childs}}" wx:for-index="cindex" wx:key="ckey" wx:for-item="citem">
+            <view class="userInfoTitle margin-b-30">
+              <view class="userInfo">
+                <image wx:if="{{citem.fromUserPhoto==null}}" class="userImg" src="/image/boy.png" style="width:60rpx;height:60rpx;border-radius: 30rpx"></image>
+                <image wx:else src="{{citem.fromUserPhoto}}"></image>
+                <view>
+                  <view class="userName">
+                    <text>{{citem.fromUserName}}</text>
+                  </view>
+                  <view class="date">
+                    <text>{{citem.submitTime}}</text>
+                  </view>
+                </view>
+              </view>
+              <view class="videoInfo">
+                <view style="display: flex" data-item="{{citem}}" bindtap="setEvalHeart">
+                  <image class="VideoImgWH" src="/image/message.png" data-status="1" style="margin-right:10rpx"></image>
+                  <text class="fontSize-24">评论</text>
+                </view>
+                <view style="display: flex" data-item="{{citem}}" bindtap="setHeart">
+                  <image wx:if="{{citem.hasHeart}}" class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount-red.png"></image>
+                  <image wx:else class="VideoImgWH" style="margin:0rpx 10rpx 0rpx 30rpx" src="/image/heartCount.png"></image>
+                  <view class="count">{{citem.heartCount}}</view>
+                </view>
+              </view>
+            </view>
+            <view class="commentCon margin-b-30">
+              <text class="fontSize-24">{{citem.content}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="userRewriteComment" id="dFoot">
+        <view class="commentCon">
+          <view class="userImg">
+            <image src="{{photo}}" style="width:60rpx;height:60rpx;border-radius: 30rpx;"></image>
+          </view>
+          <view class="search-box">
+            <input wx:if="{{!applyFocus}}" class="search-input" value="{{commentInput}}" maxlength="60" confirm-type="send" type="text" placeholder="吐槽一下再走吧~" placeholder-class="input-placeholder" bindconfirm="sendComment" />
+            <input wx:if="{{applyFocus}}" focus="{{true}}" value="{{applyCommentInput}}" maxlength="60" class="search-input" confirm-type="send" type="text" placeholder="吐槽一下再走吧~" placeholder-class="input-placeholder" bindconfirm="sendApplyComment" />
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

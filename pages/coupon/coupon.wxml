@@ -1,0 +1,81 @@
+<view>
+  <view class="coupon-list-box">
+    <view class="coupon-item" wx:for="{{coupon}}" wx:for-index="index" wx:key="key" wx:for-item="item">
+      <view class="coupon-main">
+        <view class="coupon-left">
+          <view class="coupon-price">
+            <view class="coupon-price-tag">￥</view>{{item.moneyYuan}}
+          </view>
+          <view class="coupon-desc">
+          {{couponType[item.type]}}
+          </view>
+        </view>
+        <view class="coupon-right">
+          <view class="coupon-title">
+          {{item.name}}
+          </view>
+          <view class="coupon-date">
+          有效期至：{{item.endingEffectiveTime}}
+          </view>
+        </view>
+      </view>
+      <view class="coupon-btn" bindtap="getCouple" data-type="{{item.type}}" data-id="{{item.id}}">
+        立即领取
+      </view>
+    </view>
+    <!-- <view class="coupon-item">
+      <view class="coupon-main">
+        <view class="coupon-left">
+          <view class="coupon-price">
+            <view class="coupon-price-tag">￥</view>1000
+          </view>
+          <view class="coupon-desc">
+          全平台通用
+          </view>
+        </view>
+        <view class="coupon-right">
+          <view class="coupon-title">
+          平台通用券
+          </view>
+          <view class="coupon-date">
+          有效期至：2019.10.20
+          </view>
+        </view>
+      </view>
+      <view class="coupon-btn coupon-2">
+        立即领取
+      </view>
+    </view> -->
+    <!-- <view class="coupon-item">
+      <view class="coupon-main">
+        <view class="coupon-left">
+          <view class="coupon-price">
+            <view class="coupon-price-tag">￥</view>1000
+          </view>
+          <view class="coupon-desc">
+          全平台通用全平台通用
+          </view>
+        </view>
+        <view class="coupon-right">
+          <view class="coupon-title">
+          平台通用券全平台通用
+          </view>
+          <view class="coupon-date">
+          有效期至：2019.10.20
+          </view>
+        </view>
+      </view>
+      <view class="coupon-btn coupon-3">
+        立即领取
+      </view>
+    </view> -->
+  </view>
+    <!-- 平台券 -->
+   <view wx:if="{{showfindCoachModal}}">
+    <coach-dialog  bindconfirm="formfindCoachSubmit" bindclose="closeCoachDialog"></coach-dialog>
+  </view>
+  <!-- 驾校 教练 -->
+  <view wx:if="{{insCoachModal}}">
+   <couple-dialog  bindconfirm="formfindCoachSubmit" bindclose="closeCoachDialog"></ couple-dialog>
+ </view>
+</view>

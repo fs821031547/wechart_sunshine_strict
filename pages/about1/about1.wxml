@@ -1,0 +1,115 @@
+
+<view class='Rntit'>
+      <image src="/image/Int/Rn.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='RnBox'>
+      <view class='title'>报名条件</view>
+      <view class='txtle mb10'>
+        <text class='fw700'><text class='Ls'>年</text>龄：</text>18-70岁，60岁以上报名费加500元</view>
+      <view class='txtle mb10'>
+        <text class='fw700'><text class='Ls'>身</text>体：</text>C1、C2牌不限身高，双手拇指健全</view>
+      <view class='txtle mb30'>
+        <text class='fw700'><text class='Ls'>视</text>力：</text>C1C2牌≥5.0(矫正)，无红绿色盲</view>
+      <view class='title'>报名资料</view>
+      <view class='txtle mb10'>
+        <text class='fw700'><text class='Ls'>体</text>检：</text>体检表一份，到区级以上医院体检</view>
+      <view class='txtle mb10'>
+        <text class='fw700'><text class='Ls'>相</text>片：</text>12张小一寸彩色白底免冠免制服正面大头像</view>
+      <view class='txtle mb10'>
+        <text class='fw700'><text class='Ls2'>身份</text>证：</text>复印件，3份（旧版正面，新版正反面）</view>
+      <view class='txtle '>
+        <text class='fw700'>数码回执：</text>公安局联网照相馆专用驾驶证照片并打印回执</view>
+    </view>
+
+    <view class='Rntit'>
+      <image src="/image/Int/Lc.png" class='imgw' mode="widthFix" />
+    </view>
+    <view class='LcBox'>
+      <view class='Lcicon'>
+        <image src="/image/Int/LcIcon.png" class='imgw' mode="widthFix" />
+      </view>
+    </view>
+    <view class='h10'></view>
+
+    <view class='LcBox'>
+
+      <view class='array'>
+        <view class='dig'>01</view>
+        <view class='title'>出流水号和资金监管</view>
+        <view class='txtle'>
+          <text>报名成功后，把资料交给驾培机构受理，</text>
+          <text>一般十个工作日内监管资金到位即出流水号，</text>
+        </view>
+      </view>
+
+
+      <view class='array'>
+        <view class='dig'>02</view>
+        <view class='title'>理论上课和按指纹</view>
+        <view class='txtle'>
+          出流水号后大约15天安排上课并同时录指纹
+        </view>
+      </view>
+
+      <view class='array'>
+        <view class='dig'>03</view>
+        <view class='title'>科目一考试</view>
+        <view class='txtle'>
+          <view class='mb10'>
+            采集指纹后当天就预约科目一考试 科目一考试前下载《驾考宝典》APP或在本公众号做练题 一般5次在94分以上基本可以确保科目一考试合格 大约10来天参加科目一考试 (从报名提交资料到考科目一大概一个月时间)
+          </view>
+          <view class='mb10'>
+            科目一是指驾驶员理论考试， 考试内容包括驾车理论基础、 道路安全法律法规、交通信号、 通行规则等最基本的知识，再加地方性法规。
+          </view>
+          <view>
+            考试的时候带上本人的身份证， 按时到西丽科目一考场参加考试即可。 考试满分为100分，成绩达到90分的为合格。
+          </view>
+        </view>
+      </view>
+
+
+
+      <view class='array'>
+        <view class='dig'>04</view>
+        <view class='title'>科目二考试</view>
+        <view class='txtle'>
+          <view class='mb10'>考完科目一后10天便可以参加科目二考试 科目二考试满分100分，80分以上合格。 不合格者当场可补考一次， 补考未通过间隔10天以后重新预约考试。</view>
+          <view class='mb10'>与科目一不同的是， 科目一没有预约次数限制， 科目二只能最多预约5次， 如果5次预约仍不合格的， 所有考试成绩(包含科目一)作废。</view>
+          <view class='fw700'>考核内容：</view>
+          <view>科目二包含倒车入库、坡道定点停车 和起步、侧方停车、曲线行驶、 直角转弯等五项考核内容。</view>
+        </view>
+      </view>
+
+
+      <view class='array'>
+        <view class='dig'>05</view>
+        <view class='title'>科目三考试</view>
+        <view class='txtle'>
+          <view class='mb10'> 科目三与科目一间隔30天即可参加考试 考试满分为100分，成绩达到90分为合格。 不合格者当场可补考一次， 补考未通过间隔10天以后重新预约考试。 与科目二相同，科目三也只能预约5次。</view>
+          <view class='fw700'>考核内容：</view>
+          <view>科目三包含上车准备、起步、直线行驶、 加减档位操作、变更车道、靠边停车、 直行通过路口、路口左转弯、路口右转弯、 通过人行横道线、通过学校区域、通过公共 汽车站、会车、超车、掉头、灯光模拟 等16项驾驶技能。
+          </view>
+        </view>
+      </view>
+
+
+
+      <view class='array'>
+        <view class='dig'>06</view>
+        <view class='title'>科目四考试</view>
+        <view class='txtle'>
+          <view class='mb10'>考试试卷由50道题目组成， 题型为判断题、单项选择题和多项选择题， 考试满分为100分，90分以上合格。 不合格者当场可重考1次， 重考未通过者，间隔10天以后重排考试。
+          </view>
+          <view class='mb10'>考科目四记得带身份证和驾校给予的档案包 从最开始的报名生成流水号， 在科目一考试合格后最多不能超过三年。 如果超过三年，就要全部从0开始！
+          </view>
+          <view>科目二考试通过以后就要开始练习科目四，因为科目四考试紧接着科目三考试的，要提前准备。科目三一般教练会让你先预约成功以后才会让你练车，一般一个星期左右的时间练车足够了，主要还是多注意教练所教的细节问题。如果可以的话可以跟教练去考场模拟练习一下，这样通过率会比较高。</view>
+        </view>
+      </view>
+      <view class='array nobr'>
+        <view class='dig'>07</view>
+        <view class='title'>领取驾照</view>
+        <view class='txtle'>
+          <view>考试全部合格后，可在科目四考场 申请现场打印驾照 也可以在家坐等驾照邮寄上门啦 </view>
+        </view>
+      </view>
+    </view>

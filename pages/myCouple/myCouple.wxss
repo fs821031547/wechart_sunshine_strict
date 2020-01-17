@@ -1,0 +1,88 @@
+.contain{
+  background-color: #fff;
+  height: 100%;
+}
+.tipTitle{
+  width: 100%;
+  height: 110rpx;
+  background-color: #fdf6ec;
+  display: flex;
+  justify-content: center;
+  padding: 0rpx 30rpx
+}
+.tipTitleItem{
+    display: flex;
+  justify-content: center;
+  align-items: center
+}
+.tipTitle text{
+  color: #e6a23d;
+}
+.tipTitle .left{
+  flex: 1;
+}
+.tipTitle .middle{
+  flex: 6;
+  
+}
+.tipTitle .right{
+  flex: 1;
+  padding-right: 20rpx;
+}
+.tipTitle .close image{
+  width: 28rpx;
+  height: 28rpx;
+}
+.coupleList {
+  padding: 20rpx;
+}
+.coupleListItem {
+  width: 100%;
+  height: 150rpx;
+  margin-bottom: 18rpx;
+  position: relative;
+}
+.coupleListItem image {
+   width: 100%;
+    height: 100%;
+}
+.leftCouple {
+  position: absolute;
+  z-index: 2;
+  top: 32rpx;
+  left: 50rpx;
+}
+.rightCouple {
+   position: absolute;
+  z-index: 2;
+  top: 32rpx;
+  left: 300rpx;
+}
+.money {
+  display: flex;
+  align-items: center
+}
+text{
+  color: #fff
+}
+.fontSize-24{
+  font-size: 24rpx;
+}
+.fontSize-50 {
+  font-size: 50rpx;
+}
+.fontSize-22 {
+  font-size: 22rpx;
+}
+.validTime text{
+  color:#f1f1f1
+}
+.lable{
+  margin-top: -17rpx;
+}
+.lable text{
+   color:#f1f1f1
+}
+.validTime{
+   /* margin-top: -11rpx; */
+}

@@ -1,0 +1,15 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <button ontap="loginS"> 登录是否过期 </button>
+    <button ontap="pay"> 支付 </button>
+
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+
+  </view>
+  <view class="usermotto" >
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
